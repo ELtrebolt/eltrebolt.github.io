@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 feature_row:
   - image_path: /assets/profile-pics/Chargers.jpg
-    image_size: 200px
+    image_size: 10px
     alt: "Profile Pic"
     title: "Ethan Lee"
     excerpt: "Hello there! My name is Ethan (he/him) and welcome to my website! I am an individual who is passionate about utilizing technology for all of its creative capabilities. I currently work as an Information Technology Intern for the Los Angeles Chargers and want to pursue a career around sports-data applications."

@@ -22,7 +22,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 github_username: ELtrebolt
 minimal_mistakes_skin: default
 search: true
-site.author: Ethan Lee
+site.author: Professional
 
 # Build settings
 markdown: kramdown
@@ -67,18 +67,12 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/eltrebolt"
-    - label: "Spotify Statys"
+    - label: "Spotify-Statys"
       icon: "fas fa-fw fa-chart-bar"
       url: "https://spotify-statys.herokuapp.com"
     - label: "ME-DB"
       icon: "fas fa-fw fa-list-ol"
       url: "https://me-db.tech"
-    - label: "My Spotify"
-      icon: "fab fa-fw fa-spotify"
-      url: "https://open.spotify.com/user/qf26s87ilixm0wn6njz7amx2f"
-    - label: "My #1 Playlist"
-      icon: "fas fa-fw fa-bolt"
-      url: "https://open.spotify.com/playlist/0fXEEXQLRVRKN68i7iCmtI?si=1bd4cab161064d33"
 
 defaults:
   # _posts

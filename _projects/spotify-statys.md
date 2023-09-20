@@ -7,6 +7,24 @@ header:
     overlay_image: /assets/thumbnails/Spotify-Statys.jpg
     excerpt: "Spotify-Statys"
     text_color: green
+author_profile: true
+author: Ethan Lee
+sidebar:
+  - title: "Backend"
+    text: "Python"
+  - title: "Web Framework"
+    text: "Flask"
+  - title: "Frontend"
+    text: "HTML / CSS"
+  - title: "Libraries"
+    text: "
+    Dataframes: Pandas<br>
+    API: Spotipy<br>
+    Storing Data: Pickle<br>
+    Visualization: Plotly"
+  - title: "Hosting (Paid)"
+    text: "Web Server: Gunicorn<br>
+    Host: Heroku"
 ---
 
 ## Highlights 
