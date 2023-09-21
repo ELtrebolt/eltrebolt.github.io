@@ -13,7 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: My Website!
+title: ethan-lee.me
+name: Ethan Lee
 email: ethanpl@uci.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -99,8 +100,10 @@ defaults:
       type: projects
     values:
       layout: single
-      author_profile: false
-      share: true
+      author_profile: true
+      header:
+        show_overlay_excerpt: false
+        overlay_filter: 0.5
 
 category_archive:
   type: liquid
@@ -113,3 +116,11 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-969SL4RHX0"
+    anonymize_ip: false # default
+
+og_image: /assets/favicon/favicon.ico

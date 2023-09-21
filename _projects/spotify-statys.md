@@ -3,13 +3,17 @@ title: "Spotify-Statys"
 excerpt: "Python web app to see stats about your created playlists"
 toc: true
 header:
-    teaser: /assets/thumbnails/Spotify-Statys.jpg
-    overlay_image: /assets/thumbnails/Spotify-Statys.jpg
-    excerpt: "Spotify-Statys"
-    text_color: green
-author_profile: true
+    teaser: /assets/projects/Spotify-Statys.jpg
+    overlay_image: /assets/projects/Spotify-Statys.jpg
+    actions:
+    - label: "Try It Out"
+      url: "https://spotify-statys.herokuapp.com"
+    - label: "Github Repo"
+      url: "https://github.com/ELtrebolt/2021-spotify-statys"
 author: Ethan Lee
 sidebar:
+  - title: "Project Type"
+    text: "Website"
   - title: "Backend"
     text: "Python"
   - title: "Web Framework"
@@ -26,6 +30,9 @@ sidebar:
     text: "Web Server: Gunicorn<br>
     Host: Heroku"
 ---
+
+## Disclaimer
+- Although the URL is public, sign-in is not permitted to everyone, as I must first get Spotify's permission to take data from any given user. I currently use this project along with 20 Beta Testers - thanks friends!
 
 ## Highlights 
 - Built a web application using the Python-Flask framework integrated and hosted with Heroku
@@ -44,89 +51,9 @@ sidebar:
 
 <iframe width="560" height="315" src="https://github.com/ELtrebolt/2021-spotify-statys/assets/44250460/00ebe70e-50d4-4933-a8a8-78be41a0c7e2" frameborder="0" allowfullscreen></iframe>
 
-## Tech Stack
-- **Overview**
-    - Backend = Python-Flask
-    - Frontend = HTML / CSS
-    - Hosted with Heroku
-- **Streaming Data Collection**
-    - Given Spotify API token, render_template setup.html in app.py
-    - In JavaScript for setup.html, create EventSource for route setup_#
-        - Use source.onmessage function to add streamed data to setup.html
-    - In route setup_1, return Response with Generator Function and text/event-stream
-    - In Generator Function, yield "data:" + streamed-data + "\n\n"
-- **Dataframe Schema**
-    - **ALL_SONGS_DF**
-        - id
-        - name
-        - artist = String separated by commas
-        - artist_ids = String separated by commas
-        - album
-        - explicit
-        - popularity
-        - playlist = User Playlist Name
-        - added_at = String not Date
-        - duration
-        - genres = LIST of LISTS
-    - **UNIQUE_SONGS_DF**
-        - groups ALL_SONGS_DF by name and artist
-        - playlist becomes playlists = separated by commas
-        - added_at = separated by commas
-        - songfeature_percentile = percentile across all songs in the dataframe
-            - popularity, danceability, energy, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo, duration
-        - num_playlists = integer
-        - artists_short_rank = INT or "N/A" if single, STR separated by commas if multiple
-            - med, long
-        - songs_short_rank = INT or "N/A"
-            - med, long
-- **Frontload Data Collection & Querying**
-    - Pickle Library = Dump and Load Python Objects in Local File Storage
-    - Before letting the user explore the pages - make queries, draw graphs, and pickle those graphs so the pages can be quickly loaded without having to do the same work again
-    - Sign_Out will delete all files, and Heroku does so automatically after the User Session
-
-## Code Organization
-- **static** --> contains CSS styling
-- **templates** --> contains all HTML pages
-- **app.py** --> main code logic
-- **Procfile** --> required for Heroku
-- **requirements.txt** --> list of package versions
-- **runtime.txt** --> required for Heroku
-- **SetupData** --> Class to build Pandas Dataframes from Spotify API
-- **visualization.py** --> Class to build Pages and pickle Plotly graphs
-
-The following folders are dynamically created while running the app:
-- **.data** --> save .pkl graphs per Spotify User ID
-- **.flask_session** --> save session ID
-- **.sp_caches** --> save cache token for the SP object
-- **.spotify_caches** --> save cache token for the SPOTIFY object
-
-## Workflow
-1. **Activate Python Virtual Environment**** - env\scripts\activate
-2. **Test Locally** - flask run
-3. **Troubleshooting**
-    - Delete .data .flask_session .spotify_caches .cache before running
-    - heroku logs --tail
-4. **Heroku Setup**
-    - pip install gunicorn
-    - pip freeze > requirements.txt
-    - Procfile / Runtime Files
-5. **Uploading to Heroku**
-    - Change REDIRECT_URI in app.py and SetupData.py to Heroku URL
-    - heroku login
-    - heroku git:remote -a spotify-statys
-    - git add/commit
-    - git push heroku master
-    - heroku open
-6. **Pulling from Heroku**
-    - Install Heroku CLI
-    - heroku login
-    - heroku git:clone -a spotify-statys
-    - env\scripts\activate
-    - pip install -r requirements.txt
-
 ## Updates
 - **Known Bugs**
-    1. Top 50 - Last 4 Weeks - % of Top 50 Artists (bottom graph) will not always grab the full 50 artists = usually only the top 29 or 30. 
+    1. If any of your Top 50 Songs or Artists do not have songs in any of your playlists, they will not be shown in the graphs.
     2. Today's Date = a day ahead sometimes
 - **Future Features**
     1. Collect Liked Songs and Include in All Graphs
@@ -134,7 +61,7 @@ The following folders are dynamically created while running the app:
     3. Styling
     4. Mobile Responsiveness
 
-## Features
+## Features List
 - **Home Page**
     - **On This Date**
         - What songs did you add to which playlists a year ago today?

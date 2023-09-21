@@ -9,10 +9,10 @@ author_profile: true
 author: Professional
 ---
 
-My favorite projects:
-- Spotify-Statys: a Spotify stats website with over 30 unique visualizations
-- ME-DB: a text-based Tier List app for your favorite Anime, TV Shows, Movies, and Video Games
+**My favorite projects**:
+- **Spotify-Statys**: a Spotify stats website with over 30 unique visualizations about your created playlists
+- **ME-DB**: a text-based Tier List app for your favorite Anime, TV Shows, Movies, and Video Games
 
-Some projects I want to work on: 
-- NFL Fantasy Football League Stats
+**Some projects I want to work on**: 
+- NFL Fantasy Football League Stats - historical head to head record, AVG Rank, etc.
 - A Year Ago: a reflective note-taking app
