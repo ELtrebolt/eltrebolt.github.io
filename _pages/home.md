@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 feature_row:
   - image_path: /assets/profile-pics/Chargers.jpg
-    image_size: 10px
+    image_size: 50%
     alt: "Profile Pic"
     title: "Ethan Lee"
     excerpt: "Hello there! My name is Ethan (he/him) and welcome to my website! I am an individual who is passionate about utilizing technology for all of its creative capabilities. I currently work as an Information Technology Intern for the Los Angeles Chargers and want to pursue a career around sports-data applications."
@@ -25,7 +25,7 @@ feature_row2:
   - image_path: /assets/projects/minimal-mistakes.jpg
     alt: "About This Website"
     title: "About This Website"
-    excerpt: "This personal website / portfolio / blog to showcase my work"
+    excerpt: "This personal website / portfolio / blog is to showcase me, my work, and my knowledge!"
     url: "/projects/personal-website"
     btn_label: "See Project Page"
     btn_class: "btn--warning"

@@ -10,7 +10,6 @@ header:
       url: "https://github.com/ELtrebolt/eltrebolt.github.io"
     - label: "Minimal Mistakes Template"
       url: "https://mmistakes.github.io/minimal-mistakes"
-author: Ethan Lee
 sidebar:
   - title: "Project Type"
     text: "Website"

@@ -1,7 +1,6 @@
 ---
 title: "2022 Big Data Bowl"
 excerpt: "Python Kaggle Notebook submission to evaluate special teams performance"
-toc: true
 header:
     teaser: /assets/projects/2022-NFL-Big-Data-Bowl.jfif
     overlay_image: /assets/projects/2022-NFL-Big-Data-Bowl.jfif
@@ -10,7 +9,6 @@ header:
       url: "https://www.kaggle.com/ethanplee/nfl-big-data-bowl-2022"
     - label: "Github .ipynb"
       url: "https://github.com/ELtrebolt/2022-NFL-Big-Data-Bowl"
-author: Professional
 sidebar:
   - title: "Project Type"
     text: "Kaggle Notebook"

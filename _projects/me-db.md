@@ -13,7 +13,6 @@ header:
       url: "https://github.com/ELtrebolt/ME-DB-back"
     - label: "Frontend Github"
       url: "https://github.com/ELtrebolt/ME-DB-front"
-author: Ethan Lee
 sidebar:
   - title: "Project Type"
     text: "Website"

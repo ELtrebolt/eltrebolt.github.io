@@ -23,7 +23,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 github_username: ELtrebolt
 minimal_mistakes_skin: default
 search: true
-site.author: Professional
+site.author: Ethan Lee
+og_image: /assets/favicon/favicon.ico
 
 # Build settings
 markdown: kramdown
@@ -100,10 +101,13 @@ defaults:
       type: projects
     values:
       layout: single
+      author: Professional
       author_profile: true
       header:
         show_overlay_excerpt: false
         overlay_filter: 0.5
+      toc: true
+      toc_sticky: true
 
 category_archive:
   type: liquid
@@ -122,5 +126,3 @@ analytics:
   google:
     tracking_id: "G-969SL4RHX0"
     anonymize_ip: false # default
-
-og_image: /assets/favicon/favicon.ico

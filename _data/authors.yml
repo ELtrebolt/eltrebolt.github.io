@@ -1,6 +1,6 @@
 Ethan Lee :
   name   : "Ethan Lee"
-  avatar : "/assets/profile-pics/Chargers.jpg"
+  avatar : "/assets/profile-pics/golf.jpg"
   bio    : "Always learning, creating, exploring!"
   location: Irvine, California
   links:
@@ -13,12 +13,6 @@ Ethan Lee :
     - label: "ME-DB"
       icon: "fas fa-fw fa-list-ol"
       url: "https://me-db.tech"
-    - label: "My Spotify"
-      icon: "fab fa-fw fa-spotify"
-      url: "https://open.spotify.com/user/qf26s87ilixm0wn6njz7amx2f"
-    - label: "My #1 Playlist"
-      icon: "fas fa-fw fa-bolt"
-      url: "https://open.spotify.com/playlist/0fXEEXQLRVRKN68i7iCmtI?si=1bd4cab161064d33"
     - label: "YouTube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/@Ukudabs"
@@ -27,7 +21,7 @@ Professional :
   name   : "Ethan Lee"
   avatar : "/assets/profile-pics/Chargers.jpg"
   bio    : "Aspiring to work with sports-data applications"
-  location: Irvine, California
+  location: Costa Mesa, California
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
@@ -44,9 +38,31 @@ Professional :
 
 Personal :
   name   : "Ethan Lee"
-  avatar : "/assets/profile-pics/Chargers.jpg"
+  avatar : "/assets/profile-pics/knotts.jpg"
   bio    : "Stay Hydrated!"
   location: Irvine, California
+  links:
+    - label: "Spotify Statys"
+      icon: "fas fa-fw fa-chart-bar"
+      url: "https://spotify-statys.herokuapp.com"
+    - label: "ME-DB"
+      icon: "fas fa-fw fa-list-ol"
+      url: "https://me-db.tech"
+    - label: "My Spotify"
+      icon: "fab fa-fw fa-spotify"
+      url: "https://open.spotify.com/user/qf26s87ilixm0wn6njz7amx2f"
+    - label: "My #1 Playlist"
+      icon: "fas fa-fw fa-bolt"
+      url: "https://open.spotify.com/playlist/0fXEEXQLRVRKN68i7iCmtI?si=1bd4cab161064d33"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@Ukudabs"
+
+Ukudabs :
+  name   : "Ethan Lee"
+  avatar : "/assets/profile-pics/ukudabs.jpg"
+  bio    : "Dabbing is awesome"
+  location: San Diego, California
   links:
     - label: "Spotify Statys"
       icon: "fas fa-fw fa-chart-bar"

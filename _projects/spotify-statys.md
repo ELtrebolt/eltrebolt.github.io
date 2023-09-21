@@ -10,7 +10,6 @@ header:
       url: "https://spotify-statys.herokuapp.com"
     - label: "Github Repo"
       url: "https://github.com/ELtrebolt/2021-spotify-statys"
-author: Ethan Lee
 sidebar:
   - title: "Project Type"
     text: "Website"
