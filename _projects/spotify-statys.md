@@ -1,5 +1,5 @@
 ---
-title: "Spotify-Statys"
+title: "Spotify Statys"
 excerpt: "Python web app to see stats about your created playlists"
 toc: true
 header:

@@ -1,7 +1,7 @@
 ---
 title: "ME-DB"
 tagline: "Your Media Entertainment - Database"
-excerpt: "MERN web app to organize your collection and to-do list of shows"
+excerpt: "MERN web app to organize your collection and to-do list of your favorite media"
 toc: true
 header:
     teaser: /assets/projects/ME-DB.jpg
@@ -40,3 +40,6 @@ sidebar:
 - Applied MERN stack to create a CRUD app that utilizes Google Oauth2 login with Passport JS and Cookie-Session
 - Customized interface to display user-categorized rankings of shows, movies, and video games
 - Implemented search filtering by year and tag with autocomplete suggestions based on input
+
+## Updates
+- 

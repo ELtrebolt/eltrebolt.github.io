@@ -22,6 +22,16 @@ sidebar:
     "
 ---
 
+## Reflection
+- **Highlights**
+  - Computed player distances to the ball at the moment the ball was caught by the punt returner given special teams tracking data
+  - Analyzed correlation between punt return yardage and the number of "close" players within a chosen threshold
+  - Visualized team and individual rankings by percentage of plays within a “close” threshold to the ball along with punt return yardage
+- **Next Steps**
+  - Dive deeper into what a "close" threshold should be and how it varies across values
+  - Take into account trajectory and prior speed of players as being "close" does not always have an effect on stopping the returner or forcing a fair catch
+  - Visually compare the predicted rankings versus the actual rankings based on NFL stats
+
 ## A Metric for Identifying Individual Performance in Punt Coverage
 
 ~ Ethan Lee (University of California, Irvine)

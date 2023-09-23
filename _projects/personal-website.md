@@ -1,6 +1,6 @@
 ---
 title: "Personal Website"
-excerpt: "This personal website / portfolio / blog to showcase my work"
+excerpt: "This personal website / portfolio / blog is to showcase me, my work, and my knowledge!"
 toc: true
 header:
     teaser: /assets/projects/minimal-mistakes.jpg
@@ -28,3 +28,6 @@ sidebar:
 - Provides a space for me to talk about the projects I've worked on as a hobby, and gives them a final resting place
 - Serves as reminders on how I did something in the past so I can quickly re-learn if needed
 - Lets me publish blog content for whenever I feel like writing about weird stuff
+
+## Updates
+- 
