@@ -6,7 +6,10 @@ toc: true
 toc_sticky: true
 ---
 
-*This page is meant to show off my YouTube Channel. For info on how I built it up (how-to tutorials) check out my blog posts!*
+*This page is meant to show off my YouTube Channel. For info on how I built it up (how-to tutorials) or tabs see the links below!*
+
+[YouTube](https://www.youtube.com/@Ukudabs){: .btn .btn--danger}
+[My Tabs](/music/tabs){: .btn .btn--success}
 
 ## My Story
 

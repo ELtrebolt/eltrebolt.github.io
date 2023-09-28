@@ -108,6 +108,20 @@ defaults:
         overlay_filter: 0.5
       toc: true
       toc_sticky: true
+  # _tabs
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: single
+      author: Ukudabs
+      author_profile: true
+      header:
+        show_overlay_excerpt: true
+        overlay_filter: 0.5
+      toc: true
+      toc_sticky: true
+      related: true
 
 category_archive:
   type: liquid
@@ -120,6 +134,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+  tabs:
+    output: true
+    permalink: /music/:collection/:path/
 
 analytics:
   provider: "google-gtag"
