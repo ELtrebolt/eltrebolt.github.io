@@ -8,7 +8,7 @@ author: Personal
 *This page is meant to express my personal hobbies and interests!*
 
 ## <i class="fas fa-home" style="color: #1e5cc8;"></i> Background 
-- **Origin**:			   <i class="fas fa-sun" style="color: #EEE22C;"></i> San Diego, CA 
+- **Origin**:			   <i class="fas fa-sun" style="color: #EEE22C;"></i> San Diego, CA
 - **Personality Type**:     [ESFJ](https://www.16personalities.com/esfj-personality)  
 - **Key Values**:		    High Energy, Expressive Communication, Creative Ideas
 
@@ -21,4 +21,4 @@ author: Personal
 
 ## <i class="fas fa-music" style="color: #6d4d9d;"></i> Music 
 - [Upbeat Alternative Rock](https://open.spotify.com/playlist/0fXEEXQLRVRKN68i7iCmtI?si=1bd4cab161064d33) is my jam <i class="fas fa-headphones-alt" style="color: #f57d3d;"></i>
-- On my [YouTube channel](/music) I play ukulele and guitar covers of my favorite theme songs from tv shows and anime 
+- On my [YouTube channel](/music) I play <span style="color:#886363"> ukulele and guitar covers </span> of my favorite theme songs from tv shows and anime

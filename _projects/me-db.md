@@ -7,7 +7,7 @@ header:
     teaser: /assets/projects/ME-DB.jpg
     overlay_image: /assets/projects/ME-DB.jpg
     actions:
-    - label: "Try It Out"
+    - label: "Try It Out if Registered Beta Tester"
       url: "https://me-db.tech"
     - label: "Backend Github"
       url: "https://github.com/ELtrebolt/ME-DB-back"
@@ -31,15 +31,35 @@ sidebar:
   - title: "Hosting (Free)"
     text: "Backend: Render.com<br>
     Frontend: Vercel.com"
+priority: 1
 ---
 
+## Product Pitch
+- ME-DB is your perfect ***Media Entertainment Database*** to keep track of all of your favorite shows, movies, and games!
+- Organize your media by ***tiers***, with your absolute favorites in S tier and your most regretted ones in F tier!
+- Plan your ***To-Do List*** separate from your ***Collection***, filter media by tags, and customize to your liking!
+
+## Motivations
+- I love keeping track of all of my ***favorite media*** - before I created this project I actually had separate Google Docs where I'd list them out in pages and gave each a score on how much I liked it.
+> I needed a better way to both record the data and visualize it, not in separate Google Docs but all in one application, accessible from anywhere!
+
+At the same time, with all of the new content coming out nowadays, I wanted to condense a To-Do List across multiple platforms. Instead of keeping track of multiple Watch Lists on Netflix, Hulu, and the like, I could have one place that helps me decide what I most want to spend my time doing!
+{: .notice--info}
+
 ## Disclaimer
-- Although the URL is public, sign-in is not permitted to everyone, as I must first get Google’s permission to take data from any given user. I currently use this project along with 20 Beta Testers - thanks friends!
+- Although the URL is public, *sign-in is not permitted to everyone*, as I must first get Google’s permission to take data from any given user. I currently use this project along with 20 Beta Testers - thanks friends!
+- Since this project is hosted on a ***Free Service (Render.com)***, it may take a minute or two for the website to load if the Service has not been active for a while. 
 
-## Highlights
-- Applied MERN stack to create a CRUD app that utilizes Google Oauth2 login with Passport JS and Cookie-Session
-- Customized interface to display user-categorized rankings of shows, movies, and video games
-- Implemented search filtering by year and tag with autocomplete suggestions based on input
+## Accomplishments
+- Applied ***MERN stack*** to create a CRUD app that utilizes Google Oauth2 login with Passport JS and Cookie-Session
+- Customized interface to display ***user-categorized rankings*** of shows, movies, and video games
+- Implemented ***search filtering*** by year and tag with autocomplete suggestions based on input
 
-## Updates
-- 
+## Feature Highlights
+- **Login Page** integrated with ***Google***
+- **Home Page** w/ Collection & To-Do List
+  - Create, Edit, and Delete media items
+  - Filter by Year or Tag
+- **Customization**
+  - Tier Names
+  - Tags

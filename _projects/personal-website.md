@@ -21,13 +21,15 @@ sidebar:
     text: "Minimal-Mistakes"
   - title: "Hosting (Free)"
     text: "Github Pages"
+priority: 2
 ---
 
-## Highlights
+## Accomplishments
+- Built a personal website with ***Jekyll and Github Pages*** with the intent of demonstrating individuality, planning/design, and most importantly documentation
+- Utilized an ***open-source template*** and applied customization based off of creator's Github Issues and commits
+- Recorded a ***knowledge base library*** with simple, useful information from prior approaches and results
+
+## Motivations
 - Finally made improvements to my first ever portfolio website from AP Computer Science Principles in high school 
 - Provides a space for me to talk about the projects I've worked on as a hobby, and gives them a final resting place
-- Serves as reminders on how I did something in the past so I can quickly re-learn if needed
-- Lets me publish blog content for whenever I feel like writing about weird stuff
-
-## Updates
-- 
+- Lets me publish blog content for whenever I feel like writing

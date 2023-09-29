@@ -20,7 +20,7 @@ Ethan Lee :
 Professional :
   name   : "Ethan Lee"
   avatar : "/assets/profile-pics/Chargers.jpg"
-  bio    : "Aspiring to work with sports-data applications"
+  bio    : "Aspiring software and data engineer"
   location: Costa Mesa, California
   links:
     - label: "LinkedIn"
@@ -38,7 +38,7 @@ Professional :
 
 Personal :
   name   : "Ethan Lee"
-  avatar : "/assets/profile-pics/Knotts.jpg"
+  avatar : "/assets/profile-pics/Personal.jpg"
   bio    : "Stay Hydrated!"
   location: Irvine, California
   links:

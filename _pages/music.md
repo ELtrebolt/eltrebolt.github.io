@@ -10,18 +10,17 @@ toc_sticky: true
 
 [YouTube](https://www.youtube.com/@Ukudabs){: .btn .btn--danger}
 [My Tabs](/music/tabs){: .btn .btn--success}
+{: .text-center}
 
 ## My Story
 
 I like to play the ukulele. I also like music on the radio, anime intros, tv theme songs, and the occasional dab when appropriate.
 
-Combined, this is Ukudabs!
+Combined, this is <span style="color:#886363">***Ukudabs!***</span>
 
-I post instrumentals, tutorials, and tabs using everything at my disposal – ukuleles, a boxdrum (cajon), and the Internet mostly. 
+I post instrumentals, tutorials, and [tabs](/music/tabs) using everything at my disposal – ukuleles, a boxdrum (cajon), and the Internet mostly. 
 
-If you like my content make sure to subscribe!
-
-I will not rest until I have done right by all of my favorite tv shows by covering their theme songs. Up next: How I Met Your Mother
+> I will not rest until I have done right by all of my favorite tv shows by covering their theme songs. **Up next: How I Met Your Mother**
 
 ## Top 3 Favorites
 *These are the ones I'm most proud of and likely to show people*
@@ -38,7 +37,7 @@ I am super happy with how this one turned out! Short and sweet, looks cool becau
 I wasn't expecting this one to feel so fun at first! There was a lot of things I could've done for the Community Theme Song that I actually ended up doing in Greendale Is Where I Belong instead, but the all-black Darkest Timeline goatee feels perfect to go along with Covid in 2020 at the time haha. The audio lacks a bit b/c of the static noise, but overall I'm super proud of it!
 
 ### Honorable Mention: One Piece We Are
-Just wanna say I'm proud of this one because it was my first ever :\). This song (and particularly cover by noukenolife, whose video helped me learn how to play this) was one of the biggest inspirations for me to play the ukulele. 
+Just wanna say I'm proud of this one because it was my first ever :\) This song (and particularly cover by noukenolife, whose video helped me learn how to play this) was one of the biggest inspirations for me to play the ukulele. 
 
 ## Top 3 Most Difficult
 *These are the ones I'd never want to try to record again*
@@ -58,7 +57,7 @@ One-shots are hard. I want to hit all the notes right and there's no other track
 *These are the ones with the least amount of views that I like the most*
 ### 1. Pokemon Center Theme Song
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LDnByw2Chvw?si=0jVSGPXw_8BakISw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-I totally didn't know what to film at first for this. But it's different! A little text magic and not-so-clear-cut camera angle is still better than just sitting and doing nothing. But uhh, not amazing, I know. 
+I totally didn't know what to film at first for this. But it's different! A little text magic and not-so-clear-cut camera angle is still better than just sitting and doing nothing. 
 
 ### 2. Avatar the Last Airbender Theme Song
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ihiMe76VqS4?si=KbMePJUTcAIaqhfo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

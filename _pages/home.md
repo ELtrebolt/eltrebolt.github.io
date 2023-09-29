@@ -6,7 +6,7 @@ feature_row:
     image_size: 50%
     alt: "Profile Pic"
     title: "Ethan Lee"
-    excerpt: "Hello there! My name is Ethan (he/him) and welcome to my website! I am an individual who is passionate about utilizing technology for all of its creative capabilities. I currently work as an Information Technology Intern for the Los Angeles Chargers and want to pursue a career around sports-data applications."
+    excerpt: "Hello there! My name is Ethan (he/him) and welcome to my website! I am an individual who is passionate about utilizing technology for all of its creative capabilities. I currently work as an Information Technology Intern for the Los Angeles Chargers and want to pursue a career related to software and data engineering."
 feature_row2:
   - image_path: /assets/projects/Spotify-Statys.jpg
     alt: "Spotify Statys"

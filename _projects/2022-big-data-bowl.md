@@ -20,13 +20,18 @@ sidebar:
     matplotlib<br>
     seaborn
     "
+priority: 3
 ---
 
 ## Reflection
-- **Highlights**
+- **Motivations**
+  - I heard about the NFL Big Data Bowl for the first time in Fall 2021 and knew I had to try to submit something that upcoming Winter!
+  - I had a hard time trying to figure out what kind of project I should do, as it was my first time on Kaggle and many of the published projects were just exploratory data visualizations.
+  - I was most inspired by a sample submission which analyzed the top speeds of gunners and decided to go with a similar format to produce team and individual rankings.
+- **Accomplishments**
   - Computed player distances to the ball at the moment the ball was caught by the punt returner given special teams tracking data
-  - Analyzed correlation between punt return yardage and the number of "close" players within a chosen threshold
-  - Visualized team and individual rankings by percentage of plays within a “close” threshold to the ball along with punt return yardage
+  - Analyzed ***correlation*** between punt return yardage and the number of "close" players within a chosen threshold
+  - Visualized ***team and individual rankings*** by percentage of plays within a “close” threshold to the ball along with punt return yardage
 - **Next Steps**
   - Dive deeper into what a "close" threshold should be and how it varies across values
   - Take into account trajectory and prior speed of players as being "close" does not always have an effect on stopping the returner or forcing a fair catch
