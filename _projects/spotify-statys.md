@@ -1,5 +1,7 @@
 ---
 title: "Spotify Statys"
+date: 2021-07-16
+last_modified_at: 2023-10-04
 excerpt: "Python web app to see stats about your created playlists"
 toc: true
 header:

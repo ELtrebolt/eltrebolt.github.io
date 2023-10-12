@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: ethan-lee.me
+title: ethanlee.me
 name: Ethan Lee
 email: ethanpl@uci.edu
 description: >- # this means to ignore newlines until "baseurl:"
@@ -85,7 +85,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
       share: false
       related: true
       show_date: true
@@ -96,6 +95,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      show_date: true
   # _projects
   - scope:
       path: ""
@@ -109,6 +109,7 @@ defaults:
         overlay_filter: 0.5
       toc: true
       toc_sticky: true
+      show_date: true
   # _tabs
   - scope:
       path: ""
@@ -123,6 +124,7 @@ defaults:
       toc: true
       toc_sticky: true
       related: true
+      show_date: true
 
 category_archive:
   type: liquid

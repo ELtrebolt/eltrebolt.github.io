@@ -1,5 +1,7 @@
 ---
 title: "ME-DB"
+date: 2023-08-10
+last_modified_at: 2023-10-06
 tagline: "Your Media Entertainment - Database"
 excerpt: "MERN web app to organize your collection and to-do list of your favorite media"
 toc: true
@@ -52,8 +54,9 @@ At the same time, with all of the new content coming out nowadays, I wanted to c
 
 ## Accomplishments
 - Applied ***MERN stack*** to create a CRUD app that utilizes Google Oauth2 login with Passport JS and Cookie-Session
-- Customized interface to display ***user-categorized rankings*** of shows, movies, and video games
-- Implemented ***search filtering*** by year and tag with autocomplete suggestions based on input
+- Customized interface to display ***user-categorized rankings*** of tv shows with the ability to filter by year and tags
+- ***Deployed online*** under custom subdomains using Render for the API backend and Vercel for the frontend
+
 
 ## Feature Highlights
 - **Login Page** integrated with ***Google***

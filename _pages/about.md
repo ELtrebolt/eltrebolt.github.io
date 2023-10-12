@@ -15,7 +15,7 @@ author: Personal
 ## <i class="fas fa-dumbbell" style="color: #57595b;"></i> Athletics 
 - Shoutout to **Soccer** <i class="fas fa-futbol" style="color: #1f512b;"></i>, my first team sport growing up, for *kickstarting* my love for active competition
 - **American Football** <i class="fas fa-football-ball" style="color: #511f1f;"></i> excites me in a tremendous way, and ultimately is the sport I want to build a career in because of both its hype and team strategy mechanics
-- **Tennis** <i class="fas fa-baseball-ball" style="color: #dff24a;"></i> is the sport I've continuously played the longest in both high school varsity and college at [UC Irvine Club Travel Team](https://www.facebook.com/TennisClubatUCI/) as a B Team Doubles Player
+- **Tennis** <i class="fas fa-baseball-ball" style="color: #dff24a;"></i> is the sport I've continuously played the longest in both high school varsity and college with the [UC Irvine Club Travel Team](https://www.facebook.com/TennisClubatUCI/) as a B Team Doubles Player
 - **Pickleball** <i class="fas fa-table-tennis" style="color: #0fcc84;"></i> I occassionally play after getting tired of moving around too much in Tennis
 - **Golf** <i class="fas fa-golf-ball" style="color: #c0c0c9;"></i> is a rare outing, but every now and then I'll hop over to a driving range and see how many swings it takes me to get the ball off the ground
 

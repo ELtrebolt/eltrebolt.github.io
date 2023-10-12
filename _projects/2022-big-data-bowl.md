@@ -1,5 +1,6 @@
 ---
 title: "2022 Big Data Bowl"
+date: 2022-01-07
 excerpt: "Python Kaggle Notebook submission to evaluate special teams performance"
 header:
     teaser: /assets/projects/2022-NFL-Big-Data-Bowl.jfif

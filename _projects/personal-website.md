@@ -1,5 +1,7 @@
 ---
 title: "Personal Website"
+date: 2023-09-18
+last_modified_at: 2023-10-12
 excerpt: "This personal website / portfolio / blog is to showcase me, my work, and my knowledge!"
 toc: true
 header:
@@ -25,7 +27,7 @@ priority: 2
 ---
 
 ## Accomplishments
-- Built a personal website with ***Jekyll and Github Pages*** with the intent of demonstrating individuality, planning/design, and most importantly documentation
+- Built a personal website with ***Jekyll and Github Pages*** with the intent of demonstrating individuality, planning/design, and documentation
 - Utilized an ***open-source template*** and applied customization based off of creator's Github Issues and commits
 - Recorded a ***knowledge base library*** with simple, useful information from prior approaches and results
 
