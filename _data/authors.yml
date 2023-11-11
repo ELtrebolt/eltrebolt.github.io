@@ -6,7 +6,7 @@ Ethan Lee :
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "linkedin.com/in/ethan-lee-00002619a/"
+      url: "linkedin.com/in/ethanpl"
     - label: "Spotify Statys"
       icon: "fas fa-fw fa-chart-bar"
       url: "https://spotify-statys.herokuapp.com"
@@ -25,7 +25,7 @@ Professional :
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "linkedin.com/in/ethan-lee-00002619a/"
+      url: "linkedin.com/in/ethanpl"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/eltrebolt"

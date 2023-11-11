@@ -9,10 +9,8 @@ categories:
 Before creating this website I often pondered whether or not it would be worth it to have a blog at all. I'm the type of person that always has to dive into my own motivations - the WHY - so that I can be confident I'm making the right decision in coherence.
 
 The following are the 2 main motivations I've settled upon.
-- **Digital Real Estate** = displaying my personal content that I created. Like, **I did that!** 
-- **Organize valuable information**
-  - I want to remember how I did something in the past so I can quickly re-learn if needed
-  - I want to share tips and tricks that I learned so it may help others just as others have helped me
+- **Publish writing** = I think it's awesome to put out my own content that I created. I've always liked writing, and to me crafting essays in school was always fun because it's a constant work in progress to develop, improve, and ultimately complete a paper from start to finish.
+- **Organize valuable information** = I want to remember how I did something in the past so I can quickly re-learn if needed, and at the same time I want to share tips and tricks that I learned so it may help others just as others across the internet have helped me.
 
 I very much like the text written at <https://thelaziestprogrammer.com/about/> :
 

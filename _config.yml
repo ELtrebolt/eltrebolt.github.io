@@ -69,12 +69,6 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/eltrebolt"
-    - label: "Spotify Statys"
-      icon: "fas fa-fw fa-chart-bar"
-      url: "https://spotify-statys.herokuapp.com"
-    - label: "ME-DB"
-      icon: "fas fa-fw fa-list-ol"
-      url: "https://me-db.tech"
 
 defaults:
   # _posts

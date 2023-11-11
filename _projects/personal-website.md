@@ -12,6 +12,8 @@ header:
       url: "https://github.com/ELtrebolt/eltrebolt.github.io"
     - label: "Minimal Mistakes Template"
       url: "https://mmistakes.github.io/minimal-mistakes"
+    - label: "Customization Tutorials"
+      url: "/guides/How-To-Customize-Minimal-Mistakes/"
 sidebar:
   - title: "Project Type"
     text: "Website"
@@ -33,5 +35,5 @@ priority: 2
 
 ## Motivations
 - Finally made improvements to my first ever portfolio website from AP Computer Science Principles in high school 
-- Provides a space for me to talk about the projects I've worked on as a hobby, and gives them a final resting place
+- Provides a space for me to show off the projects I've worked on as a hobby so I can be proud I've completed something
 - Lets me publish blog content for whenever I feel like writing

@@ -12,9 +12,5 @@ sort_by: priority
 *This page is meant to show off the projects I've completed, the skills I used, and the features I've implemented. For info on how I built them (how-to tutorials) check out my blog posts!*
 
 **My favorites**:
-- <span style="color:#636EFA"> **Spotify-Statys** </span> - a Spotify stats website with over 30 unique visualizations about your created playlists
-- <span style="color:#2c3e50"> **ME-DB** </span> - a text-based Tier List web app for your favorite Anime, TV Shows, Movies, and Video Games
-
-**Some stuff I want to work on**: 
-- NFL Fantasy Football League Stats - historical head to head record, AVG Rank, etc.
-- A Year Ago - a reflective note-taking app
+- <span style="color:#636EFA"> **Spotify-Statys** </span> - a Python web app that analyzes your created playlists on Spotify with over 30 unique visualizations
+- <span style="color:#2c3e50"> **ME-DB** </span> - a JavaScript web app to build customized tier-list rankings for your favorite Anime, TV Shows, Movies, and Video Games
