@@ -1,0 +1,48 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getCollection } from 'astro:content';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => (b.data.priority || 0) - (a.data.priority || 0)
+);
+---
+
+<ContentLayout title="Projects" authorName="Professional">
+  <div class="space-y-12">
+    <header>
+      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 mb-4 sm:text-5xl">Projects</h1>
+      <p class="text-xl text-gray-500 leading-relaxed max-w-2xl">A showcase of my work and technical accomplishments, ranging from data visualization to web tools.</p>
+    </header>
+
+    <div class="grid grid-cols-1 gap-12">
+      {projects.map((project) => (
+        <article class="group relative grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
+          <div class="md:col-span-1">
+             {project.data.header?.teaser && (
+                <img 
+                  src={project.data.header.teaser} 
+                  alt={project.data.title} 
+                  class="rounded-lg shadow-md aspect-video md:aspect-square object-cover group-hover:scale-[1.02] transition-transform duration-300" 
+                />
+              )}
+          </div>
+          <div class="md:col-span-3">
+            <h2 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+              <a href={`/projects/${project.slug}/`}>
+                {project.data.title}
+              </a>
+            </h2>
+            <p class="mt-3 text-gray-600 leading-relaxed">
+              {project.data.excerpt}
+            </p>
+            <div class="mt-4 flex items-center space-x-4">
+               <a href={`/projects/${project.slug}/`} class="text-sm font-semibold text-blue-600 hover:text-blue-800 flex items-center">
+                Project Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</ContentLayout>

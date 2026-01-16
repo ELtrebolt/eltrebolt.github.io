@@ -1,0 +1,35 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getCollection } from 'astro:content';
+
+const tabs = await getCollection('music');
+---
+
+<ContentLayout title="Music" authorName="Ukudabs">
+  <div class="space-y-12">
+    <header>
+      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 mb-4 sm:text-5xl">Music</h1>
+      <p class="text-xl text-gray-500 leading-relaxed max-w-2xl">Ukulele and guitar covers of theme songs from TV shows and anime. Here you'll find the tabs I've created!</p>
+    </header>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {tabs.map((tab) => (
+        <a 
+          href={`/music/${tab.slug}/`} 
+          class="group flex flex-col p-6 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+        >
+          <div class="flex items-center justify-between mb-4">
+            <div class="p-3 bg-purple-50 text-purple-600 rounded-xl group-hover:bg-purple-600 group-hover:text-white transition-colors">
+              <i class="fas fa-music text-xl"></i>
+            </div>
+            <i class="fas fa-chevron-right text-gray-300 group-hover:text-gray-900 transition-colors"></i>
+          </div>
+          <h2 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
+            {tab.data.title}
+          </h2>
+          <p class="mt-2 text-sm text-gray-500 font-medium">View Tab Details &rarr;</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</ContentLayout>

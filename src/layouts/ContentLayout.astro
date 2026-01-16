@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Sidebar from '../components/Sidebar.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  authorName?: string;
+}
+
+const { title, description, authorName } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="lg:flex lg:space-x-12">
+    <div class="lg:w-1/4 mb-10 lg:mb-0">
+      <Sidebar authorName={authorName} />
+    </div>
+    <article class="lg:w-3/4">
+      <div class="prose prose-slate max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-800">
+        <slot />
+      </div>
+    </article>
+  </div>
+</BaseLayout>

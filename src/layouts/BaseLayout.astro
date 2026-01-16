@@ -1,0 +1,69 @@
+---
+import { SITE, NAVIGATION } from '../config';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description = SITE.description } = Astro.props;
+const siteTitle = title ? `${title} | ${SITE.title}` : SITE.title;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{siteTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body class="bg-white text-gray-900 font-sans min-h-screen flex flex-col">
+    <header class="border-b border-gray-200 sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center space-x-8">
+            <a href="/" class="flex-shrink-0 flex items-center font-bold text-lg tracking-tight">
+              {SITE.title}
+            </a>
+            <div class="hidden sm:flex sm:space-x-4">
+              {NAVIGATION.map((item) => (
+                <a
+                  href={item.url}
+                  class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  {item.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+      <slot />
+    </main>
+
+    <footer class="border-t border-gray-100 py-10 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-gray-500 text-sm">
+          <div>
+            &copy; {new Date().getFullYear()} {SITE.author}.
+          </div>
+          <div class="flex space-x-6">
+            <a href={`https://github.com/${SITE.github_username}`} class="hover:text-gray-900 transition-colors">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href={`mailto:${SITE.email}`} class="hover:text-gray-900 transition-colors">
+              <i class="fas fa-envelope"></i> Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

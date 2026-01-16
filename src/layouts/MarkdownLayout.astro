@@ -1,0 +1,8 @@
+---
+import ContentLayout from './ContentLayout.astro';
+const { frontmatter } = Astro.props;
+---
+
+<ContentLayout title={frontmatter.title} authorName={frontmatter.author}>
+  <slot />
+</ContentLayout>

@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const featureRow1 = {
+  image: '/assets/profile-pics/Chargers.jpg',
+  title: 'Ethan Lee',
+  excerpt: 'Hello there! My name is Ethan (he/him) and welcome to my website! I am an individual who is passionate about utilizing technology for all of its creative capabilities. I currently work as an Information Technology Intern for the Los Angeles Chargers and want to pursue a career related to software and data engineering.'
+};
+
+const projects = [
+  {
+    image: '/assets/projects/Spotify-Statys.jpg',
+    title: 'Spotify Statys',
+    excerpt: 'a Python web app that analyzes your created playlists on Spotify with over 30 unique visualizations',
+    url: '/projects/spotify-statys/',
+    btnLabel: 'See Project Page'
+  },
+  {
+    image: '/assets/projects/ME-DB.jpg',
+    title: 'ME-DB',
+    excerpt: 'a JavaScript web app to build tier-list rankings for your favorite Anime, TV Shows, Movies, and Video Games',
+    url: '/projects/me-db/',
+    btnLabel: 'See Project Page'
+  },
+  {
+    image: '/assets/projects/minimal-mistakes.jpg',
+    title: 'About This Website',
+    excerpt: 'this personal website / portfolio / blog is to showcase me, my work, and my knowledge!',
+    url: '/projects/personal-website/',
+    btnLabel: 'See Project Page'
+  }
+];
+---
+
+<BaseLayout>
+  <div class="space-y-20 py-10">
+    <!-- Hero Section -->
+    <section class="text-center space-y-8 max-w-4xl mx-auto">
+      <img src={featureRow1.image} alt={featureRow1.title} class="w-48 h-48 rounded-full mx-auto shadow-xl object-cover" />
+      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">{featureRow1.title}</h1>
+      <p class="text-xl text-gray-600 leading-relaxed">{featureRow1.excerpt}</p>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {projects.map((project) => (
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col transition-all hover:shadow-md">
+          <img src={project.image} alt={project.title} class="h-48 w-full object-cover" />
+          <div class="p-6 flex-grow flex flex-col">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+            <p class="text-gray-600 text-sm mb-6 flex-grow">{project.excerpt}</p>
+            <a href={project.url} class="inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+              {project.btnLabel}
+            </a>
+          </div>
+        </div>
+      ))}
+    </section>
+  </div>
+</BaseLayout>

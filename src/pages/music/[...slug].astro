@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+
+export async function getStaticPaths() {
+  const tabs = await getCollection('music');
+  return tabs.map((tab) => ({
+    params: { slug: tab.slug },
+    props: { tab },
+  }));
+}
+
+const { tab } = Astro.props;
+const { Content } = await tab.render();
+---
+
+<ContentLayout title={tab.data.title} authorName="Ukudabs">
+  <header class="mb-10 pb-8 border-b border-gray-100">
+    <div class="flex items-center space-x-2 text-purple-600 mb-4 font-semibold text-sm tracking-wider uppercase">
+      <i class="fas fa-guitar"></i>
+      <span>Music Tab</span>
+    </div>
+    <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">{tab.data.title}</h1>
+  </header>
+  <div class="prose-purple">
+    <Content />
+  </div>
+</ContentLayout>

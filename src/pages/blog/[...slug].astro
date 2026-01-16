@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<ContentLayout title={post.data.title} description={post.data.title}>
+  <header class="mb-10 pb-8 border-b border-gray-100">
+    <time class="text-sm font-medium text-gray-400" datetime={post.data.date.toISOString()}>
+      {post.data.date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })}
+    </time>
+    <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 mt-3 sm:text-5xl">{post.data.title}</h1>
+    {post.data.categories && (
+      <div class="flex flex-wrap gap-2 mt-4">
+        {post.data.categories.map(cat => (
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+            {cat}
+          </span>
+        ))}
+      </div>
+    )}
+  </header>
+  <Content />
+</ContentLayout>
