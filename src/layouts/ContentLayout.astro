@@ -6,20 +6,92 @@ interface Props {
   title?: string;
   description?: string;
   authorName?: string;
+  projectSidebar?: Array<{ title: string; text: string }>;
+  headings?: Array<{ depth: number; slug: string; text: string }>;
+  showProfile?: boolean;
 }
 
-const { title, description, authorName } = Astro.props;
+const { title, description, authorName, projectSidebar, headings, showProfile = true } = Astro.props;
+const hasTOC = headings && headings.length > 0;
+const hasProjectDetails = projectSidebar && projectSidebar.length > 0;
+const hasAboutDetails = authorName === 'About';
+const showLeftColumn = showProfile || hasProjectDetails || hasAboutDetails;
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="lg:flex lg:space-x-12">
-    <div class="lg:w-1/4 mb-10 lg:mb-0">
-      <Sidebar authorName={authorName} />
-    </div>
-    <article class="lg:w-3/4">
-      <div class="prose prose-slate max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-800">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-6">
+    <!-- Hero Row (Full Width for Picture/Title) -->
+    {Astro.slots.has('hero') && (
+      <div class="lg:col-span-12">
+        <slot name="hero" />
+      </div>
+    )}
+
+    <!-- Left Column: Details -->
+    {showLeftColumn && (
+      <aside class="lg:col-span-3">
+        <div class="sticky top-24 space-y-8">
+          <Sidebar authorName={authorName} projectSidebar={projectSidebar} showProfile={showProfile} />
+        </div>
+      </aside>
+    )}
+
+    <!-- Center Column: Content -->
+    <main class={`${
+      !showLeftColumn 
+        ? (hasTOC ? "lg:col-span-9" : "lg:col-span-12") 
+        : (hasTOC ? "lg:col-span-6" : "lg:col-span-9")
+    }`}>
+      <div class="prose prose-slate max-w-none prose-headings:font-black prose-headings:tracking-tight prose-a:text-blue-600 prose-a:hover:text-blue-800 prose-img:rounded-2xl prose-img:shadow-lg">
         <slot />
       </div>
-    </article>
+    </main>
+
+    <!-- Right Column: TOC -->
+    {hasTOC && (
+      <aside class="lg:col-span-3 hidden lg:block">
+        <div class="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pr-2 custom-scrollbar">
+          <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <div class="bg-gray-600 px-6 py-3 flex items-center gap-2">
+              <i class="fas fa-list-ul text-[10px] text-white/80"></i>
+              <h2 class="text-xs font-black uppercase tracking-widest text-white">On this page</h2>
+            </div>
+            <nav class="p-4 space-y-1">
+              {headings.filter(h => h.depth <= 3).map(heading => (
+                <a 
+                  href={`#${heading.slug}`}
+                  class={`block text-sm transition-all duration-200 py-2 px-3 rounded-lg hover:bg-gray-50 group ${
+                    heading.depth === 2 
+                      ? 'font-bold text-gray-700' 
+                      : 'text-gray-500 pl-8 text-xs'
+                  }`}
+                >
+                  <span class="flex items-center gap-3">
+                    {heading.depth === 2 && <span class="w-1 h-4 bg-gray-200 rounded-full group-hover:bg-blue-500 transition-colors"></span>}
+                    {heading.text}
+                  </span>
+                </a>
+              ))}
+            </nav>
+          </div>
+        </div>
+      </aside>
+    )}
   </div>
 </BaseLayout>
+
+<style is:global>
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #d1d5db;
+  }
+</style>

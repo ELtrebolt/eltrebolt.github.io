@@ -8,6 +8,7 @@ header:
     actions:
     - label: "See All My Tabs"
       url: "/music/tabs"
+author: Music
 tags:
   - Ukulele
   - Tab
@@ -15,7 +16,7 @@ tags:
 ---
 
 ## PDF Tab
-<iframe src="/assets/tabs/Parks and Rec Tab.pdf" width="100%" height="800px" frameborder="0"></iframe>
+<iframe src="/assets/tabs/parks-and-rec-tab.pdf" width="100%" height="800px" frameborder="0"></iframe>
 
 ## My Cover
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CoNMVker3zw?si=zMr9Loy9wFogCKQT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

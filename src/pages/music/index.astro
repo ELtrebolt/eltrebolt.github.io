@@ -1,35 +1,106 @@
 ---
 import ContentLayout from '../../layouts/ContentLayout.astro';
-import { getCollection } from 'astro:content';
 
-const tabs = await getCollection('music');
+const headings = [
+  { depth: 2, slug: 'my-story', text: 'My Story' },
+  { depth: 2, slug: 'top-3-favorites', text: 'Top 3 Favorite Covers' },
+  { depth: 3, slug: 'fav-1', text: '1. See You Again - Kobe Bryant Tribute' },
+  { depth: 3, slug: 'fav-2', text: '2. Brooklyn Nine-Nine Theme Song' },
+  { depth: 3, slug: 'fav-3', text: '3. Community Theme Song' },
+  { depth: 3, slug: 'fav-hm', text: 'Honorable Mention: One Piece We Are' },
+];
 ---
 
-<ContentLayout title="Music" authorName="Ukudabs">
+<ContentLayout title="Ukudabs" authorName="Music" headings={headings}>
   <div class="space-y-12">
     <header>
-      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 mb-4 sm:text-5xl">Music</h1>
-      <p class="text-xl text-gray-500 leading-relaxed max-w-2xl">Ukulele and guitar covers of theme songs from TV shows and anime. Here you'll find the tabs I've created!</p>
+      <h1 class="text-5xl font-black tracking-tight text-gray-900 mb-6">Ukudabs</h1>
+      <p class="text-xl text-gray-500 leading-relaxed max-w-2xl">
+        Hi there, I like playing guitar and ukulele, especially my favorite songs from tv shows and anime. Check out my YouTube channel for covers or tabs for how to play, and thanks for stopping by!
+      </p>
     </header>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      {tabs.map((tab) => (
-        <a 
-          href={`/music/${tab.slug}/`} 
-          class="group flex flex-col p-6 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-        >
-          <div class="flex items-center justify-between mb-4">
-            <div class="p-3 bg-purple-50 text-purple-600 rounded-xl group-hover:bg-purple-600 group-hover:text-white transition-colors">
-              <i class="fas fa-music text-xl"></i>
-            </div>
-            <i class="fas fa-chevron-right text-gray-300 group-hover:text-gray-900 transition-colors"></i>
-          </div>
-          <h2 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
-            {tab.data.title}
-          </h2>
-          <p class="mt-2 text-sm text-gray-500 font-medium">View Tab Details &rarr;</p>
-        </a>
-      ))}
+    <div class="flex justify-center items-center gap-6 py-4">
+      <a 
+        href="https://www.youtube.com/@Ukudabs" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="group relative px-8 py-3 bg-[#f87171] !text-white font-bold rounded-xl shadow-lg hover:shadow-red-200 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 no-underline"
+      >
+        <span class="flex items-center gap-2">
+          <i class="fab fa-youtube text-xl group-hover:scale-110 transition-transform"></i>
+          YouTube
+        </span>
+      </a>
+      <a 
+        href="/music/tabs/" 
+        class="group relative px-8 py-3 bg-[#4ade80] !text-white font-bold rounded-xl shadow-lg hover:shadow-green-200 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 no-underline"
+      >
+        <span class="flex items-center gap-2">
+          <i class="fas fa-file-invoice text-xl group-hover:scale-110 transition-transform"></i>
+          My Tabs
+        </span>
+      </a>
     </div>
+
+    <section id="my-story" class="scroll-mt-24">
+      <h2 class="text-3xl font-black text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">My Story</h2>
+      <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
+        <p>
+          I like to play the ukulele. I also like music on the radio, anime intros, tv theme songs, and the occasional dab when appropriate.
+        </p>
+        <p>
+          Combined, this is <strong class="text-orange-600 italic">Ukudabs!</strong>
+        </p>
+        <p>
+          I post instrumentals, tutorials, and <a href="/music/tabs/" class="text-orange-600 hover:text-orange-700 font-semibold no-underline hover:underline">tabs</a> using everything at my disposal - ukuleles, a boxdrum (cajon), and the Internet mostly.
+        </p>
+      </div>
+    </section>
+
+    <section id="top-3-favorites" class="scroll-mt-24">
+      <h2 class="text-3xl font-black text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">Top 3 Favorite Covers</h2>
+      <div class="space-y-12">
+        <div id="fav-1" class="space-y-4">
+          <h3 class="text-xl font-bold text-gray-900">1. See You Again - Kobe Bryant Tribute</h3>
+          <div class="aspect-video rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zMyKGwcSjig?si=xM0q1anBfonMs6B-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <p class="text-gray-700 leading-relaxed">
+            I think I'm most proud of this one because of the circumstances around it. The world lost a hero when Kobe Bryant died in February 2020, and anyone could see the impact felt around the world. For me, he wasn't an all-time idol because I was never such a big fan of basketball. But I am a big fan of sports. And his competitiveness, his Mamba Mentality, that's something that everyone admired about him no matter a sports fan or not. So I wanted to give tribute to him and of course his daughter, and I did so within the week because of how much it meant to me. Quotes are powerful, but Kobe Quotes... those just hit different now.
+          </p>
+        </div>
+
+        <div id="fav-2" class="space-y-4">
+          <h3 class="text-xl font-bold text-gray-900">2. Brooklyn Nine-Nine Theme Song</h3>
+          <div class="aspect-video rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NwQ7lHO6Ie4?si=ycQsS92TY1DmbS_C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <p class="text-gray-700 leading-relaxed">
+            I am super happy with how this one turned out! Short and sweet and felt as cool as Peralta. It also sounds better thanks to actually using a real microphone. And like, I just think it's a bop.
+          </p>
+        </div>
+
+        <div id="fav-3" class="space-y-4">
+          <h3 class="text-xl font-bold text-gray-900">3. Community Theme Song</h3>
+          <div class="aspect-video rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9ou8jRy0y5k?si=pG9LkJRv7y9a_hXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <p class="text-gray-700 leading-relaxed">
+            I wasn't expecting this one to be so fun at first! There was a lot of things I could've done for the Community Theme Song that I actually ended up doing in Greendale Is Where I Belong instead, but the all-black Darkest Timeline goatee feels perfect to go along with COVID in 2020 at the time haha. The audio lacks a bit b/c of the static noise, but overall I'm super proud of it!
+          </p>
+        </div>
+
+        <div id="fav-hm" class="space-y-4">
+          <h3 class="text-xl font-bold text-gray-900">Honorable Mention: One Piece We Are</h3>
+          <div class="aspect-video rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/DAWDZxJfPBo?si=M3K2S3qOq-w9x-oT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <p class="text-gray-700 leading-relaxed">
+            Just wanna say I'm proud of this one because it was my first cover :) This song (and particularly cover by noukenolife, whose video helped me learn how to play this) was one of the biggest inspirations for me to play the ukulele.
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </ContentLayout>

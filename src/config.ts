@@ -1,16 +1,16 @@
 export const SITE = {
-  title: 'ethanlee.me',
+  title: 'Ethan P Lee',
   description: 'Personal website of Ethan Lee',
   author: 'Ethan Lee',
   github_username: 'ELtrebolt',
-  email: 'ethanpl@uci.edu',
+  linkedin_url: 'https://linkedin.com/in/ethanpl',
+  email: 'leeep.dev@gmail.com',
   url: 'https://eltrebolt.github.io',
 };
 
 export const NAVIGATION = [
-  { title: 'About Me', url: '/about/' },
+  { title: 'About', url: '/about/' },
   { title: 'Projects', url: '/projects/' },
-  { title: 'Resume', url: '/assets/resume.pdf' },
   { title: 'Music', url: '/music/' },
   { title: 'Blog', url: '/blog/' },
 ];
@@ -19,63 +19,74 @@ export interface AuthorLink {
   label: string;
   icon: string;
   url: string;
+  color?: string;
 }
 
 export interface Author {
   name: string;
   avatar: string;
   bio: string;
+  quote?: string;
   location: string;
+  email?: string;
   links: AuthorLink[];
 }
 
 export const AUTHORS: Record<string, Author> = {
-  'Ethan Lee': {
-    name: 'Ethan Lee',
-    avatar: '/assets/profile-pics/Golf.jpg',
-    bio: 'Always learning, creating, exploring!',
-    location: 'Irvine, California',
-    links: [
-      { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl' },
-      { label: 'Spotify Statys', icon: 'fas fa-fw fa-chart-bar', url: 'https://spotify-statys.herokuapp.com' },
-      { label: 'ME-DB', icon: 'fas fa-fw fa-list-ol', url: 'https://me-db.tech' },
-      { label: 'YouTube', icon: 'fab fa-fw fa-youtube', url: 'https://www.youtube.com/@Ukudabs' },
-    ],
-  },
-  Professional: {
+  Home: {
     name: 'Ethan Lee',
     avatar: '/assets/profile-pics/Chargers.jpg',
-    bio: 'Aspiring software and data engineer',
-    location: 'Costa Mesa, California',
+    bio: 'Software Engineer',
+    quote: 'Automate everything.',
+    location: 'Los Angeles, California',
     links: [
-      { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl' },
-      { label: 'GitHub', icon: 'fab fa-fw fa-github', url: 'https://github.com/eltrebolt' },
-      { label: 'Spotify Statys', icon: 'fas fa-fw fa-chart-bar', url: 'https://spotify-statys.herokuapp.com' },
-      { label: 'ME-DB', icon: 'fas fa-fw fa-list-ol', url: 'https://me-db.tech' },
+      { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl', color: 'text-[#0077b5]' },
+      { label: 'GitHub', icon: 'fab fa-fw fa-github', url: 'https://github.com/eltrebolt', color: 'text-[#181717]' },
     ],
   },
-  Personal: {
+  Projects: {
     name: 'Ethan Lee',
     avatar: '/assets/profile-pics/Personal.jpg',
-    bio: 'Stay Hydrated!',
-    location: 'Irvine, California',
+    bio: 'Full-Stack Software Engineer',
+    quote: 'Why pay for an app when you can build it yourself?',
+    location: '',
     links: [
-      { label: 'Spotify Statys', icon: 'fas fa-fw fa-chart-bar', url: 'https://spotify-statys.herokuapp.com' },
-      { label: 'ME-DB', icon: 'fas fa-fw fa-list-ol', url: 'https://me-db.tech' },
-      { label: 'My Spotify', icon: 'fab fa-fw fa-spotify', url: 'https://open.spotify.com/user/qf26s87ilixm0wn6njz7amx2f' },
-      { label: 'My #1 Playlist', icon: 'fas fa-fw fa-bolt', url: 'https://open.spotify.com/playlist/0fXEEXQLRVRKN68i7iCmtI?si=1bd4cab161064d33' },
-      { label: 'YouTube', icon: 'fab fa-fw fa-youtube', url: 'https://www.youtube.com/@Ukudabs' },
+      { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl', color: 'text-[#0077b5]' },
+      { label: 'GitHub', icon: 'fab fa-fw fa-github', url: 'https://github.com/eltrebolt', color: 'text-[#181717]' },
     ],
   },
-  Ukudabs: {
+  About: {
     name: 'Ethan Lee',
-    avatar: 'https://yt3.googleusercontent.com/ytc/APkrFKZVoNI5392nte2uFW4PNCWHYu5nyhcMAud5mo-4=s176-c-k-c0x00ffffff-no-rj',
-    bio: 'Dabbing is awesome',
-    location: 'San Diego, California',
+    avatar: '/assets/favicon/apple-touch-icon.png',
+    bio: 'Sports lover, Eagle Scout, and amateur music maker',
+    quote: 'Stay Hydrated!',
+    location: '',
     links: [
-      { label: 'My Spotify', icon: 'fab fa-fw fa-spotify', url: 'https://open.spotify.com/user/qf26s87ilixm0wn6njz7amx2f' },
-      { label: 'My #1 Playlist', icon: 'fas fa-fw fa-bolt', url: 'https://open.spotify.com/playlist/0fXEEXQLRVRKN68i7iCmtI?si=1bd4cab161064d33' },
-      { label: 'YouTube', icon: 'fab fa-fw fa-youtube', url: 'https://www.youtube.com/@Ukudabs' },
+      { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl', color: 'text-[#0077b5]' },
+      { label: 'YouTube', icon: 'fab fa-fw fa-youtube', url: 'https://www.youtube.com/@Ukudabs', color: 'text-[#ff0000]' },
+    ],
+  },
+  Music: {
+    name: 'Ukudabs',
+    avatar: 'https://yt3.googleusercontent.com/ytc/APkrFKZVoNI5392nte2uFW4PNCWHYu5nyhcMAud5mo-4=s176-c-k-c0x00ffffff-no-rj',
+    bio: 'Amateur Ukulele/Guitar Player',
+    quote: 'Yes, dabbing is awesome.',
+    location: '',
+    email: 'ukudabs@gmail.com',
+    links: [
+      { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl', color: 'text-[#0077b5]' },
+      { label: 'YouTube', icon: 'fab fa-fw fa-youtube', url: 'https://www.youtube.com/@Ukudabs', color: 'text-[#ff0000]' },
+    ],
+  },
+  Blog: {
+    name: 'Ethan Lee',
+    avatar: '/assets/profile-pics/Golf.jpg',
+    bio: 'Writing Enthusiast',
+    quote: 'Always learning, creating, exploring!',
+    location: '',
+    links: [
+      { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl', color: 'text-[#0077b5]' },
+      { label: 'GitHub', icon: 'fab fa-fw fa-github', url: 'https://github.com/eltrebolt', color: 'text-[#181717]' },
     ],
   },
 };

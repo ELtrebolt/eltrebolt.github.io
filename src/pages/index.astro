@@ -1,60 +1,293 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { AUTHORS, SITE } from '../config';
+import { getCollection } from 'astro:content';
 
-const featureRow1 = {
-  image: '/assets/profile-pics/Chargers.jpg',
-  title: 'Ethan Lee',
-  excerpt: 'Hello there! My name is Ethan (he/him) and welcome to my website! I am an individual who is passionate about utilizing technology for all of its creative capabilities. I currently work as an Information Technology Intern for the Los Angeles Chargers and want to pursue a career related to software and data engineering.'
-};
+const author = AUTHORS.Home;
 
-const projects = [
+const experiences = [
   {
-    image: '/assets/projects/Spotify-Statys.jpg',
-    title: 'Spotify Statys',
-    excerpt: 'a Python web app that analyzes your created playlists on Spotify with over 30 unique visualizations',
-    url: '/projects/spotify-statys/',
-    btnLabel: 'See Project Page'
+    company: 'Los Angeles Chargers',
+    role: 'Software Engineer (Business Intelligence)',
+    period: '2024 - Present',
+    description: 'Built API ingestion pipelines to collect, normalize, and persist data from third-party vendors, enabling accurate revenue reporting and lead segmentation across sales, service, and email marketing.',
+    skills: ['Python', 'Apex', 'REST APIs', 'SQL']
   },
   {
-    image: '/assets/projects/ME-DB.jpg',
-    title: 'ME-DB',
-    excerpt: 'a JavaScript web app to build tier-list rankings for your favorite Anime, TV Shows, Movies, and Video Games',
-    url: '/projects/me-db/',
-    btnLabel: 'See Project Page'
-  },
-  {
-    image: '/assets/projects/minimal-mistakes.jpg',
-    title: 'About This Website',
-    excerpt: 'this personal website / portfolio / blog is to showcase me, my work, and my knowledge!',
-    url: '/projects/personal-website/',
-    btnLabel: 'See Project Page'
+    company: 'Los Angeles Chargers',
+    role: 'Jr. Developer (IT Systems)',
+    period: '2022 - 2024',
+    description: 'Automated onboarding/offboarding, IP phone setup, and device audit reports, improving reliability and consistency to reduce manual errors.',
+    skills: ['Python', 'PowerShell', 'Power Platform']
   }
 ];
+
+const projects = (await getCollection('projects'))
+  .sort((a, b) => (b.data.priority || 0) - (a.data.priority || 0))
+  .slice(0, 2);
+
+
+const education = [
+  {
+    school: 'University of California, Irvine',
+    degree: 'B.S. in Computer Science, Minor in Statistics',
+    period: '2020 - 2024',
+    details: 'Specialization in Intelligent Systems'
+  }
+];
+
+const awards = [
+  {
+    title: 'Eagle Scout',
+    issuer: 'Troop 765 - Carmel Valley, San Diego',
+    date: '2019'
+  }
+];
+
+const skills = [
+  { 
+    category: 'Languages', 
+    items: [
+      { name: 'Python', level: 3 },
+      { name: 'JavaScript', level: 2 },
+      { name: 'Apex', level: 2 },
+      { name: 'SQL', level: 2 },
+      { name: 'HTML/CSS', level: 2 }
+    ] 
+  },
+  { 
+    category: 'Frameworks/Tools', 
+    items: [
+      { name: 'Node.js', level: 2 },
+      { name: 'React.js', level: 2 },
+      { name: 'Astro/Tailwind', level: 1 }
+    ] 
+  },
+  { 
+    category: 'Data/Cloud', 
+    items: [
+      { name: 'REST APIs', level: 3 },
+      { name: 'MongoDB', level: 2 },
+      { name: 'Azure', level: 1 },
+      { name: 'AWS', level: 1 }
+    ] 
+  }
+];
+
+const getSkillIcon = (skillName: string) => {
+  const icons: Record<string, string> = {
+    'Python': 'fab fa-python text-blue-500',
+    'JavaScript': 'fab fa-js text-yellow-400',
+    'React.js': 'fab fa-react text-blue-400',
+    'Node.js': 'fab fa-node-js text-green-500',
+    'MongoDB': 'fas fa-leaf text-green-500',
+    'SQL': 'fas fa-database text-gray-500',
+    'Apex': 'fab fa-salesforce text-blue-400',
+    'REST APIs': 'fas fa-cloud text-blue-400',
+    'HTML/CSS': 'fab fa-html5 text-orange-500',
+    'AWS': 'fab fa-aws text-orange-400',
+    'Azure': 'fab fa-microsoft text-blue-500',
+    'PowerShell': 'fas fa-terminal text-blue-600',
+    'Power Platform': 'fas fa-bolt text-blue-400',
+    'Flask': 'fas fa-flask text-gray-700',
+    'Spotify API': 'fab fa-spotify text-green-500',
+    'Data Viz': 'fas fa-chart-bar text-purple-500',
+    'Astro/Tailwind CSS': 'fas fa-wind text-cyan-400',
+    'Express.js': 'fas fa-server text-gray-600'
+  };
+  return icons[skillName] || 'fas fa-code text-gray-400';
+};
 ---
 
 <BaseLayout>
-  <div class="space-y-20 py-10">
-    <!-- Hero Section -->
-    <section class="text-center space-y-8 max-w-4xl mx-auto">
-      <img src={featureRow1.image} alt={featureRow1.title} class="w-48 h-48 rounded-full mx-auto shadow-xl object-cover" />
-      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">{featureRow1.title}</h1>
-      <p class="text-xl text-gray-600 leading-relaxed">{featureRow1.excerpt}</p>
-    </section>
-
-    <!-- Projects Grid -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {projects.map((project) => (
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col transition-all hover:shadow-md">
-          <img src={project.image} alt={project.title} class="h-48 w-full object-cover" />
-          <div class="p-6 flex-grow flex flex-col">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-            <p class="text-gray-600 text-sm mb-6 flex-grow">{project.excerpt}</p>
-            <a href={project.url} class="inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">
-              {project.btnLabel}
-            </a>
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
+    <!-- Left Column: Sidebar -->
+    <aside class="md:col-span-4 lg:col-span-3">
+      <div class="sticky top-24 space-y-8">
+        <div class="text-center md:text-left space-y-4">
+          <a href="/about/" class="block hover:opacity-90 transition-opacity">
+            <img 
+              src={author.avatar} 
+              alt={author.name} 
+              class="w-48 h-48 md:w-48 md:h-48 rounded-full mx-auto md:mx-0 shadow-lg object-cover aspect-square border-4 border-white" 
+            />
+          </a>
+          <div class="space-y-1">
+            <h1 class="text-3xl font-bold text-gray-900">{author.name}</h1>
+            <p class="text-lg font-medium text-blue-600">{author.bio}</p>
+            <p class="text-gray-500 flex items-center justify-center md:justify-start gap-2">
+              <i class="fas fa-location-dot"></i> {author.location}
+            </p>
           </div>
         </div>
-      ))}
-    </section>
+
+        <div class="pt-4 flex flex-wrap gap-6 justify-center md:justify-start items-center">
+          <a 
+            href={`mailto:${SITE.email}`} 
+            class="text-rose-500 hover:scale-125 hover:-translate-y-1 active:scale-95 transition-all duration-300 text-5xl" 
+            title="Email"
+            aria-label="Send an email to Ethan"
+          >
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+          {author.links.map((link) => (
+            <a 
+              href={link.url} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class={`${link.color || 'text-gray-400'} hover:scale-125 hover:-translate-y-1 active:scale-95 transition-all duration-300 text-5xl`} 
+              title={link.label}
+              aria-label={`Visit Ethan's ${link.label} profile`}
+            >
+              <i class={link.icon} aria-hidden="true"></i>
+            </a>
+          ))}
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Column: Main Content -->
+    <div class="md:col-span-8 lg:col-span-9 space-y-12">
+      <!-- Welcome Section -->
+      <header>
+        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 mb-4 sm:text-5xl">Welcome!</h1>
+        <p class="text-xl text-gray-600 leading-relaxed max-w-2xl">
+          I write code to build data-driven applications and automations. Driven by a love for creativity, organization, and efficiency.
+        </p>
+      </header>
+
+      <!-- Experience -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
+          <i class="fas fa-briefcase text-blue-600"></i> Experience
+        </h2>
+        <div class="space-y-8">
+          {experiences.map((exp) => (
+            <div class="relative pl-8 border-l-2 border-gray-100">
+              <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white"></div>
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900">{exp.role}</h3>
+                  <p class="text-blue-600 font-medium">{exp.company}</p>
+                </div>
+                <span class="text-sm font-medium text-gray-400 mt-1 sm:mt-0">{exp.period}</span>
+              </div>
+              <p class="text-gray-600 leading-relaxed">{exp.description}</p>
+              {exp.skills && (
+                <div class="mt-4 flex flex-wrap gap-2">
+                  {exp.skills.map((skill) => (
+                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full font-semibold text-xs border border-blue-100 shadow-sm flex items-center gap-1.5">
+                      <i class={getSkillIcon(skill)}></i>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Projects -->
+      {projects.length > 0 && (
+        <section class="space-y-6">
+          <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
+            <i class="fas fa-code text-blue-600"></i> Featured Projects
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {projects.map((project) => (
+              <a href={`/projects/${project.slug}/`} class="group block p-6 bg-gray-50 rounded-2xl border border-transparent hover:border-blue-200 hover:bg-white hover:shadow-xl transition-all">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600">{project.data.title}</h3>
+                  {project.data.years && (
+                    <span class="text-xs font-medium text-gray-400 group-hover:text-gray-500 transition-colors pt-1">
+                      {project.data.years}
+                    </span>
+                  )}
+                </div>
+                <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">{project.data.excerpt}</p>
+                <div class="flex flex-wrap gap-2">
+                  {(project.data.skills?.slice(0, 4) ?? []).map((tag) => (
+                    <span class="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 rounded flex items-center gap-1">
+                      <i class={getSkillIcon(tag)}></i>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <!-- Education & Awards -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <section class="space-y-6">
+          <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
+            <i class="fas fa-graduation-cap text-blue-600"></i> Education
+          </h2>
+          {education.map((edu) => (
+            <div class="space-y-2">
+              <h3 class="text-lg font-bold text-gray-900">{edu.school}</h3>
+              <p class="text-blue-600 font-medium">{edu.degree}</p>
+              <p class="text-sm text-gray-400">{edu.period}</p>
+              <p class="text-gray-600 text-sm leading-relaxed">{edu.details}</p>
+            </div>
+          ))}
+        </section>
+
+        <section class="space-y-6">
+          <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
+            <i class="fas fa-trophy text-blue-600"></i> Awards
+          </h2>
+          <div class="space-y-4">
+            {awards.map((award) => (
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center text-yellow-600">
+                  <i class="fas fa-medal"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-gray-900">{award.title}</h3>
+                  <p class="text-sm text-gray-500">{award.issuer} • {award.date}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <!-- Skills -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
+          <i class="fas fa-screwdriver-wrench text-blue-600"></i> Featured Skills & Technologies
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {skills.map((skill) => (
+            <div class="space-y-4">
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">{skill.category}</h3>
+              <ul class="space-y-3">
+                {skill.items.map((item) => (
+                  <li class="flex items-center justify-between group">
+                    <div class="flex items-center gap-3">
+                      <i class={`${getSkillIcon(item.name)} w-5 text-center`}></i>
+                      <span class="text-gray-700 font-medium">{item.name}</span>
+                    </div>
+                    <div class="flex gap-1">
+                      {[1, 2, 3].map((i) => (
+                        <div 
+                          class={`h-1.5 w-6 rounded-full transition-colors ${
+                            i <= item.level ? 'bg-blue-600' : 'bg-gray-200'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
   </div>
 </BaseLayout>

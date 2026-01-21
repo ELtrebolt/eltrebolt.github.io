@@ -11,60 +11,84 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { Content } = await project.render();
+const { Content, headings } = await project.render();
+
+// Normalize GitHub links into an array of { label, url }
+const githubLinks = project.data.github 
+  ? (Array.isArray(project.data.github) 
+      ? project.data.github.map(link => typeof link === 'string' ? { label: 'GitHub Repo', url: link } : link)
+      : [{ label: 'GitHub Repo', url: project.data.github }])
+  : [];
+
+// Ensure we have a valid date and not Dec 31, 1969 (Unix timestamp 0 or less)
+const isValidDate = (d: Date) => d instanceof Date && !isNaN(d.getTime()) && d.getTime() > 86400000; // More than 1 day after epoch
+const showLastModified = project.data.last_modified_at && isValidDate(project.data.last_modified_at);
 ---
 
-<ContentLayout title={project.data.title} description={project.data.excerpt} authorName="Professional">
-  <div class="mb-10">
+<ContentLayout title={project.data.title} description={project.data.excerpt} authorName="Projects" projectSidebar={project.data.sidebar} headings={headings} showProfile={false}>
+  <div slot="hero" class="mb-12">
     {project.data.header?.overlay_image && (
-       <div class="relative h-64 md:h-80 w-full rounded-2xl overflow-hidden mb-10 shadow-md">
-          <img src={project.data.header.overlay_image} alt={project.data.title} class="w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-6">
-             <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">{project.data.title}</h1>
-             {project.data.excerpt && <p class="text-white/80 mt-4 text-lg max-w-2xl">{project.data.excerpt}</p>}
+       <div class="relative h-64 md:h-80 w-full rounded-3xl overflow-hidden shadow-2xl group">
+          <img src={project.data.header.overlay_image} alt={project.data.title} class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-8 md:p-12">
+             <div class="max-w-4xl">
+                <div class="flex items-center gap-3 text-white/70 text-sm font-medium mb-4">
+                  <time datetime={project.data.date.toISOString()}>
+                    <i class="far fa-calendar-alt mr-2"></i>
+                    {project.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </time>
+                  {showLastModified && (
+                    <>
+                      <span>•</span>
+                      <span>
+                        <i class="fas fa-edit mr-2"></i>
+                        Updated {project.data.last_modified_at!.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                      </span>
+                    </>
+                  )}
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
+                  {project.data.title}
+                </h1>
+                
+                <div class="flex flex-wrap gap-4 mt-2">
+                  {project.data.url && (
+                    <a 
+                      href={project.data.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center px-6 py-3 bg-white text-gray-900 rounded-xl font-bold text-sm hover:bg-gray-100 transition-all active:scale-95 shadow-lg"
+                    >
+                      Check It Out <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                    </a>
+                  )}
+                  {githubLinks.map((link) => (
+                    <a 
+                      href={link.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-md text-white border border-white/30 rounded-xl font-bold text-sm hover:bg-white/30 transition-all active:scale-95 shadow-lg"
+                    >
+                      <i class="fab fa-github mr-2 text-lg"></i> {link.label}
+                    </a>
+                  ))}
+                </div>
+             </div>
           </div>
        </div>
     )}
     
     {!project.data.header?.overlay_image && (
-      <header class="mb-10">
-        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">{project.data.title}</h1>
-        {project.data.excerpt && <p class="text-xl text-gray-500 mt-4">{project.data.excerpt}</p>}
+      <header class="py-12 border-b border-gray-100">
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter text-gray-900 leading-none">{project.data.title}</h1>
+        {project.data.excerpt && <p class="text-2xl text-gray-500 mt-6 font-medium max-w-3xl leading-relaxed">{project.data.excerpt}</p>}
       </header>
     )}
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-      <div class="md:col-span-2 space-y-4">
-        {project.data.header?.actions && (
-          <div class="flex flex-wrap gap-3">
-            {project.data.header.actions.map(action => (
-              <a 
-                href={action.url} 
-                target={action.url.startsWith('http') ? "_blank" : "_self"}
-                rel={action.url.startsWith('http') ? "noopener noreferrer" : ""}
-                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-semibold rounded-lg shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-all active:scale-95"
-              >
-                {action.label}
-              </a>
-            ))}
-          </div>
-        )}
-      </div>
-
-      <div class="md:col-span-1">
-        {project.data.sidebar && (
-          <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 divide-y divide-gray-200">
-            {project.data.sidebar.map(item => (
-              <div class="py-3 first:pt-0 last:pb-0">
-                <span class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest">{item.title}</span>
-                <span class="block text-gray-700 font-semibold mt-1 text-sm">{item.text}</span>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
   </div>
 
   <Content />
 </ContentLayout>
+
+<style is:global>
+  /* Global styles moved to global.css */
+</style>

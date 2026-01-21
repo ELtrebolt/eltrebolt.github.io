@@ -8,6 +8,7 @@ header:
     actions:
     - label: "See All My Tabs"
       url: "/music/tabs"
+author: Music
 tags:
   - Ukulele
   - Tab
@@ -16,7 +17,7 @@ tags:
 
 
 ## PDF Tab
-<iframe src="/assets/tabs/Kids Again Riff Tab.pdf" width="100%" height="800px" frameborder="0"></iframe>
+<iframe src="/assets/tabs/kids-again-tab.pdf" width="100%" height="800px" frameborder="0"></iframe>
 
 ## My Cover
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ANefTANgvSE?si=B8W0vvsGKI7w70WT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

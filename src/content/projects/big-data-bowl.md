@@ -1,18 +1,13 @@
 ---
-title: "2022 Big Data Bowl"
+title: "Big Data Bowl"
 date: 2022-01-07
-excerpt: "Python Kaggle Notebook submission to evaluate special teams performance"
+excerpt: "Evaluated special teams performance on punt plays using location data"
 header:
-    teaser: /assets/projects/2022-NFL-Big-Data-Bowl.jfif
-    overlay_image: /assets/projects/2022-NFL-Big-Data-Bowl.jfif
-    actions:
-    - label: "Kaggle Notebook"
-      url: "https://www.kaggle.com/ethanplee/nfl-big-data-bowl-2022"
-    - label: "Github .ipynb"
-      url: "https://github.com/ELtrebolt/2022-NFL-Big-Data-Bowl"
+    teaser: /assets/projects/Big-Data-Bowl.jfif
+    overlay_image: /assets/projects/Big-Data-Bowl.jfif
 sidebar:
   - title: "Project Type"
-    text: "Kaggle Notebook"
+    text: "Data-Visualization Notebook"
   - title: "Python Libraries"
     text: "
     pandas<br>
@@ -21,7 +16,10 @@ sidebar:
     matplotlib<br>
     seaborn
     "
-priority: 3
+skills: ["Python", "Pandas", "Matplotlib"]
+github: "https://github.com/ELtrebolt/2022-NFL-Big-Data-Bowl"
+priority: 1
+years: "2022"
 ---
 
 ## Reflection

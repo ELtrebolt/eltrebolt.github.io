@@ -8,6 +8,7 @@ header:
     actions:
     - label: "See All My Tabs"
       url: "/music/tabs"
+author: Music
 tags:
   - Ukulele
   - Tab
@@ -15,7 +16,7 @@ tags:
 ---
 
 ## PDF Tab
-<iframe src="/assets/tabs/Lights Down Low Riff Tab.pdf" width="100%" height="800px" frameborder="0"></iframe>
+<iframe src="/assets/tabs/lights-down-low-tab.pdf" width="100%" height="800px" frameborder="0"></iframe>
 
 ## My Cover
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8dY-LJYciCQ?si=1IWN7Ghg5L8seiy9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

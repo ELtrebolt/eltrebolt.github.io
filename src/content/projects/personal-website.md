@@ -1,39 +1,38 @@
 ---
 title: "Personal Website"
 date: 2023-09-18
-last_modified_at: 2023-10-12
 excerpt: "This personal website / portfolio / blog is to showcase me, my work, and my knowledge!"
 toc: true
 header:
     teaser: /assets/projects/minimal-mistakes.jpg
     overlay_image: /assets/projects/minimal-mistakes.jpg
-    actions:
-    - label: "My Github Repo"
-      url: "https://github.com/ELtrebolt/eltrebolt.github.io"
-    - label: "Minimal Mistakes Template"
-      url: "https://mmistakes.github.io/minimal-mistakes"
-    - label: "Customization Tutorials"
-      url: "/guides/How-To-Customize-Minimal-Mistakes/"
 sidebar:
   - title: "Project Type"
-    text: "Website"
-  - title: "Language"
-    text: "Ruby"
-  - title: "Web Framework"
-    text: "Jekyll"
-  - title: "Template"
-    text: "Minimal-Mistakes"
-  - title: "Hosting (Free)"
-    text: "Github Pages"
+    text: "Portfolio Website"
+  - title: "Framework"
+    text: "Astro"
+  - title: "Styling"
+    text: "Tailwind CSS"
+  - title: "Hosting"
+    text: "GitHub Pages"
+skills: ["Astro", "Tailwind CSS", "GitHub Pages", "TypeScript"]
+github: "https://github.com/ELtrebolt/eltrebolt.github.io"
 priority: 2
+years: "2023 - Present"
 ---
 
-## Accomplishments
-- Built a personal website with ***Jekyll and Github Pages*** with the intent of demonstrating individuality, planning/design, and documentation
-- Utilized an ***open-source template*** and applied customization based off of creator's Github Issues and commits
-- Recorded a ***knowledge base library*** with simple, useful information from prior approaches and results
+## Astro Version (Current)
+- ***Performance First***: Migrated to Astro to leverage its "Zero JS by default" architecture, resulting in lightning-fast load times.
+- ***Component-Based***: Utilizes Astro components and layouts for a modular, maintainable codebase that's easy to extend.
+- ***Content Collections***: Managed via Astro's built-in Content Collections API, ensuring type-safety for all blog posts and projects.
+- ***Modern Styling***: Completely rebuilt the UI using Tailwind CSS for a unique, responsive, and accessible design.
 
-## Motivations
-- Finally made improvements to my first ever portfolio website from AP Computer Science Principles in high school 
-- Provides a space for me to show off the projects I've worked on as a hobby so I can be proud I've completed something
-- Lets me publish blog content for whenever I feel like writing
+## Jekyll Version (Old)
+- ***Static Foundation***: Originally built using Jekyll, a Ruby-based static site generator.
+- ***Open Source Template***: Leveraged the "Minimal Mistakes" theme, which provided a robust starting point for my portfolio.
+- ***Learning Experience***: Taught me the basics of Liquid templating, Markdown-based content management, and deployment via GitHub Pages.
+
+## Inspirations
+Just wanted to shoutout these themes that helped inspire my website!
+- [Minimal Mistakes Jekyll Theme](https://mademistakes.com/work/jekyll-themes/minimal-mistakes/) - The main foundation of my original site
+- [Dev-Friendly Portfolio Astro Theme](https://astro.build/themes/details/dev-friendly-portfolio/) - great interactive and visual design!

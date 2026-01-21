@@ -1,53 +1,35 @@
 ---
 title: "Spotify Statys"
 date: 2021-07-16
-last_modified_at: 2023-10-04
-excerpt: "Python web app to see stats about your created playlists"
+excerpt: "Dynamic data visualization website to see stats about your created playlists"
 toc: true
 header:
-    teaser: /assets/projects/Spotify-Statys.jpg
-    overlay_image: /assets/projects/Spotify-Statys.jpg
-    actions:
-    - label: "Try It Out if Registered Beta Tester"
-      url: "https://spotify-statys.herokuapp.com"
-    - label: "Github Repo"
-      url: "https://github.com/ELtrebolt/2021-spotify-statys"
+  teaser: "/assets/projects/Spotify-Statys.jpg"
+  overlay_image: "/assets/projects/Spotify-Statys.jpg"
 sidebar:
   - title: "Project Type"
-    text: "Website"
+    text: "Dynamic Data-Vis Website"
   - title: "Backend"
     text: "Python"
   - title: "Web Framework"
     text: "Flask"
   - title: "Frontend"
-    text: "HTML / CSS"
+    text: "HTML/CSS"
   - title: "Libraries"
-    text: "
-    Dataframes: Pandas<br>
-    API: Spotipy<br>
-    Storing Data: Pickle<br>
-    Visualization: Plotly"
-  - title: "Hosting (Paid)"
-    text: "Web Server: Gunicorn<br>
-    Host: Heroku"
-priority: 1
+    text: "Dataframes: Pandas<br>API: Spotipy<br>Storing Data: Pickle<br>Visualization: Plotly"
+  - title: "Hosting"
+    text: "Current: PythonAnywhere<br>Formerly: Heroku"
+skills: ["Python", "Flask", "Spotify API", "Data Viz"]
+github: "https://github.com/ELtrebolt/2021-spotify-statys"
+priority: 3
+years: "2021 - 2025"
+url: "https://spotifystatys.pythonanywhere.com/"
 ---
 
-## Introduction
-- Spotify Statys is your personal data analyst for all of ***your created playlists*** on Spotify! We compare every metric possible between audio features, genres, Top 50 Rankings, and date added across all of your tracks, artists, and playlists!
-> This all started because I have so many different Spotify playlists, and I wanted to see how they compared against each other. 
-- I mostly like to organize my playlists by genre, so ***I wanted to verify that I was building my playlists the way I originally designed it***. For example, do both my Upbeat Pop and Casual Pop playlists have mostly Pop songs, and does Upbeat Pop ***have more energy on average*** than Casual Pop?
-
-I also just wanted to see ***cool stats*** about any of the songs that I was currently playing from my library, like if the artist was in the Top 50 or how many different playlists the song has been added to!
-{: .notice--info}
-
-## Disclaimer
-- Although the URL is public, *sign-in is not permitted to everyone*, as I must first get Spotify's permission to take data from any given user. I currently use this project along with 20 Beta Testers - thanks friends!
-
-## Accomplishments 
-- Built a web application using the ***Python-Flask framework*** integrated and hosted with Heroku
-- Implemented dynamic querying through the ***Spotify API*** based on the user’s created playlists
-- Visualized insights with ***over 30 unique Plotly figures*** including bar charts, timelines, and box plots
+## What is Spotify-Statys?
+- Spotify Statys is your personal data dashboard specifically for all of ***your created playlists*** on Spotify! 
+- We compare every metric possible between audio features, genres, Top 50 Rankings, and date added across all of your saved tracks, artists, and playlists!
+- ***Unfortunately in 2025 Spotify removed public API usage for indie apps so sign-in is not permitted to everyone.*** 
 
 ## Video Demos
 - **Demo 1:** ***Features 5 Pages = Home, About Me, Currently Playing, Top 50, Search (Artists/Playlists)***
@@ -61,6 +43,25 @@ I also just wanted to see ***cool stats*** about any of the songs that I was cur
     - Others cannot access your data even if you forget to sign out
 
 <iframe width="560" height="315" src="https://github.com/ELtrebolt/2021-spotify-statys/assets/44250460/00ebe70e-50d4-4933-a8a8-78be41a0c7e2" frameborder="0" allowfullscreen></iframe>
+
+## Who is ME-DB for?
+- The ***Playlist Collector*** who likes to create and curate their own playlists and liked songs
+- The ***Genre Checker*** who likes to check what genres the currently playing song has
+- The ***Timeline Tracker*** who likes to see what time of year they tend to save songs
+- The ***Music Ranker*** who likes to identify what songs, artists, and playlists they listen to the most
+
+## How do you use ME-DB?
+- ***Login***: authorize your login with Spotify and wait for your data to be analyzed
+- ***View Cool Stats***: check out your most added songs/artists, your most energetic playlist, or your top 5 songs per genre
+- ***Listen Along***: view the Currently Playing page to see live stats about the song you're playing
+- ***Search Anything***: compare any songs, artists, and playlists across your entire library
+
+## Why did you build Spotify-Statys?
+- I mostly like to organize my playlists by genre, so ***I wanted to verify that I was building my playlists the way I originally designed it***. For example, do both my Upbeat Pop and Casual Pop playlists have mostly Pop songs, and does Upbeat Pop ***have more energy on average*** than Casual Pop?
+> This all started because I have so many different Spotify playlists, and I wanted to see how they compared against each other. 
+
+I also just wanted to see ***cool stats*** about any of the songs that I was currently playing from my library, like if the artist was in the Top 50 or how many different playlists the song has been added to!
+{: .notice--info}
 
 ## Updates
 - **Known Bugs**

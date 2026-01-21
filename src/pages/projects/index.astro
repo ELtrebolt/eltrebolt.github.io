@@ -1,48 +1,132 @@
 ---
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getCollection } from 'astro:content';
+import { getSkillIcon } from '../../utils/icons';
 
 const projects = (await getCollection('projects')).sort(
   (a, b) => (b.data.priority || 0) - (a.data.priority || 0)
 );
+
+
+
+const getProjectIcon = (slug: string) => {
+  const icons: Record<string, string> = {
+    'me-db': 'fas fa-database text-gray-700 text-xl',
+    'spotify-statys': 'fab fa-spotify text-gray-700 text-xl',
+    'personal-website': 'fas fa-user-circle text-gray-700 text-xl',
+    'big-data-bowl': 'fas fa-football text-gray-700 text-xl'
+  };
+  return icons[slug] || 'fas fa-folder text-gray-700 text-xl';
+};
 ---
 
-<ContentLayout title="Projects" authorName="Professional">
+<ContentLayout title="Projects" authorName="Projects">
   <div class="space-y-12">
     <header>
       <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 mb-4 sm:text-5xl">Projects</h1>
-      <p class="text-xl text-gray-500 leading-relaxed max-w-2xl">A showcase of my work and technical accomplishments, ranging from data visualization to web tools.</p>
+      <p class="text-xl text-gray-500 leading-relaxed max-w-2xl">A showcase of my project work and technical accomplishments, ranging from data visualization to full-stack applications.</p>
     </header>
 
-    <div class="grid grid-cols-1 gap-12">
-      {projects.map((project) => (
-        <article class="group relative grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
-          <div class="md:col-span-1">
-             {project.data.header?.teaser && (
-                <img 
-                  src={project.data.header.teaser} 
-                  alt={project.data.title} 
-                  class="rounded-lg shadow-md aspect-video md:aspect-square object-cover group-hover:scale-[1.02] transition-transform duration-300" 
-                />
-              )}
-          </div>
-          <div class="md:col-span-3">
-            <h2 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-              <a href={`/projects/${project.slug}/`}>
-                {project.data.title}
-              </a>
-            </h2>
-            <p class="mt-3 text-gray-600 leading-relaxed">
-              {project.data.excerpt}
-            </p>
-            <div class="mt-4 flex items-center space-x-4">
-               <a href={`/projects/${project.slug}/`} class="text-sm font-semibold text-blue-600 hover:text-blue-800 flex items-center">
-                Project Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
-              </a>
+    <div class="grid grid-cols-1 gap-12 not-prose">
+      {projects.map((project) => {
+        const externalLink = project.data.url;
+        const isExternal = !!externalLink;
+        const mainLink = isExternal ? externalLink : `/projects/${project.slug}/`;
+        const internalLink = `/projects/${project.slug}/`;
+        
+        // Normalize GitHub links for consistent rendering
+        const githubLinks = project.data.github 
+          ? (Array.isArray(project.data.github) 
+              ? project.data.github.map(link => typeof link === 'string' ? { url: link } : link)
+              : [{ url: project.data.github }])
+          : [];
+
+        return (
+          <article class="group relative grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
+            <div class="md:col-span-1">
+               <a 
+                 href={internalLink} 
+                 class="block overflow-hidden rounded-lg shadow-md transition-all group-hover:shadow-xl group-hover:scale-[1.02] aspect-video md:aspect-square bg-gray-100"
+               >
+                 {project.data.header?.teaser && (
+                    <img 
+                      src={project.data.header.teaser} 
+                      alt={project.data.title} 
+                      class="object-cover w-full h-full block" 
+                    />
+                  )}
+               </a>
             </div>
-          </div>
-        </article>
-      ))}
+            <div class="md:col-span-3">
+              <div class="flex items-center justify-between gap-4 mb-3">
+                <div class="flex items-center gap-3">
+                  <i class={getProjectIcon(project.slug)} aria-hidden="true"></i>
+                  <div class="flex items-center gap-2">
+                    <h2 class="text-2xl font-bold leading-none">
+                      <a 
+                        href={mainLink} 
+                        target={isExternal ? "_blank" : "_self"}
+                        rel={isExternal ? "noopener noreferrer" : ""}
+                        class="group/title inline-flex items-center gap-2 !text-gray-900 hover:!text-blue-600 !no-underline transition-colors"
+                      >
+                        <span>
+                          {project.data.title}
+                        </span>
+                        {project.data.years && (
+                          <span class="text-sm font-medium text-gray-400 group-hover/title:text-gray-500 transition-colors ml-1">
+                            {project.data.years}
+                          </span>
+                        )}
+                        {isExternal && (
+                          <i class="fas fa-arrow-up-right-from-square text-xs transition-transform duration-300 group-hover/title:-translate-y-0.5 group-hover/title:translate-x-0.5" aria-hidden="true"></i>
+                        )}
+                      </a>
+                    </h2>
+                  </div>
+                </div>
+                
+                <div class="flex items-center gap-4 ml-auto">
+                  {githubLinks.map((link, index) => (
+                    <a 
+                      href={link.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      class="!text-gray-900 hover:!text-gray-600 !no-underline transition-all duration-300 hover:scale-125 active:scale-95"
+                      title={link.label || `View ${githubLinks.length > 1 ? (index === 0 ? 'Backend' : 'Frontend') : 'Project'} on GitHub`}
+                    >
+                      <i class="fab fa-github text-2xl"></i>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <p class="text-gray-600 leading-relaxed mb-4">
+                {project.data.excerpt}
+              </p>
+
+              {project.data.skills && (
+                <div class="flex flex-wrap gap-2 mb-5">
+                  {project.data.skills.map((skill) => (
+                    <span class="px-2 py-1 text-[10px] font-bold uppercase tracking-wider !text-blue-600 bg-blue-50 rounded flex items-center gap-1.5 border border-blue-100 shadow-sm">
+                      <i class={getSkillIcon(skill)}></i>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              <div class="flex items-center space-x-4">
+                 <a 
+                   href={internalLink} 
+                   class="text-sm font-semibold !text-blue-600 hover:!text-blue-800 !no-underline flex items-center group-hover:translate-x-1 transition-transform"
+                 >
+                  Project Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        );
+      })}
     </div>
   </div>
 </ContentLayout>
