@@ -29,7 +29,7 @@ url: "https://spotifystatys.pythonanywhere.com/"
 ## What is Spotify-Statys?
 - Spotify Statys is your personal data dashboard specifically for all of ***your created playlists*** on Spotify! 
 - We compare every metric possible between audio features, genres, Top 50 Rankings, and date added across all of your saved tracks, artists, and playlists!
-- ***Unfortunately in 2025 Spotify removed public API usage for indie apps so sign-in is not permitted to everyone.*** 
+- ***Unfortunately in 2025 Spotify removed public API usage for indie apps so sign-in is not currently available to the public.*** 
 
 ## Video Demos
 - **Demo 1:** ***Features 5 Pages = Home, About Me, Currently Playing, Top 50, Search (Artists/Playlists)***
@@ -44,20 +44,20 @@ url: "https://spotifystatys.pythonanywhere.com/"
 
 <iframe width="560" height="315" src="https://github.com/ELtrebolt/2021-spotify-statys/assets/44250460/00ebe70e-50d4-4933-a8a8-78be41a0c7e2" frameborder="0" allowfullscreen></iframe>
 
-## Who is ME-DB for?
+## Who is Spotify Statys for?
 - The ***Playlist Collector*** who likes to create and curate their own playlists and liked songs
 - The ***Genre Checker*** who likes to check what genres the currently playing song has
 - The ***Timeline Tracker*** who likes to see what time of year they tend to save songs
 - The ***Music Ranker*** who likes to identify what songs, artists, and playlists they listen to the most
 
-## How do you use ME-DB?
+## How do you use Spotify Statys?
 - ***Login***: authorize your login with Spotify and wait for your data to be analyzed
 - ***View Cool Stats***: check out your most added songs/artists, your most energetic playlist, or your top 5 songs per genre
 - ***Listen Along***: view the Currently Playing page to see live stats about the song you're playing
 - ***Search Anything***: compare any songs, artists, and playlists across your entire library
 
 ## Why did you build Spotify-Statys?
-- I mostly like to organize my playlists by genre, so ***I wanted to verify that I was building my playlists the way I originally designed it***. For example, do both my Upbeat Pop and Casual Pop playlists have mostly Pop songs, and does Upbeat Pop ***have more energy on average*** than Casual Pop?
+- I mostly like to organize my playlists by genre, so ***I wanted to verify that I was building my playlists the right way***. For example, do both my Upbeat Pop and Casual Pop playlists have mostly Pop songs, and does Upbeat Pop ***have more energy on average*** than Casual Pop?
 > This all started because I have so many different Spotify playlists, and I wanted to see how they compared against each other. 
 
 I also just wanted to see ***cool stats*** about any of the songs that I was currently playing from my library, like if the artist was in the Top 50 or how many different playlists the song has been added to!

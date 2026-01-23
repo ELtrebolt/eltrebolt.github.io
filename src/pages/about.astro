@@ -3,58 +3,39 @@ import ContentLayout from '../layouts/ContentLayout.astro';
 ---
 
 <ContentLayout title="About" authorName="About">
-  <div class="space-y-12">
+  <div class="space-y-8">
     <header>
-      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 mb-4 sm:text-5xl">About</h1>
-      <p class="text-xl text-gray-500 leading-relaxed max-w-2xl">Alongside my interests in software and data engineering, I like to enjoy sports, entertainment, and a good sandwich.</p>
+      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 mb-6 sm:text-5xl">About</h1>
+      <div class="space-y-6">
+        <p class="text-xl text-gray-600 leading-relaxed">
+          I like automating tasks and organizing data.
+        </p>
+        <p class="text-md text-gray-600 leading-relaxed">
+          I view software and data engineering as the ultimate tools for organization. Whether I'm building 
+          API pipelines at work or tier-listing my <a href="https://me-db.app/user/e_lee538" target="_blank" rel="noopener noreferrer">personal media collection</a> with <a href="/projects/me-db">ME-DB</a>, <b>I strive to create code to
+          automate the collection of useful data and deliver information in a clear interface.</b>
+        </p>
+        <p class="text-md text-gray-600 leading-relaxed">
+          Python is my language of choice and I've used it extensively over the past 5 years to analyze data, build a web app, and automate several routine tasks. 
+          I also have experience developing with JavaScript, Salesforce Apex, and Microsoft Power Platform.
+          Currently, I'm learning data warehouse management and utilizing AI & LLMs within the Azure ecosystem.
+        </p>
+        <p class="text-md text-gray-600 leading-relaxed">
+          In my free time, I enjoy <a href="/about/personal">playing sports</a>, <a href="/music">making music</a>, and <a href="https://me-db.app/user/Ethan/sandwiches" target="_blank" rel="noopener noreferrer">eating sandwiches</a>.
+        </p>
+      </div>
     </header>
 
-    <div class="space-y-12">
-      <!-- Sports -->
-      <section class="space-y-6">
-        <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
-          <i class="fas fa-table-tennis-paddle-ball text-blue-600"></i> Sports
-        </h2>
-        <div class="prose prose-slate max-w-none">
-          <ul>
-            <li>
-              I grew up loving team sports while playing <strong>soccer</strong> <i class="fas fa-futbol" style="color: #1f512b;"></i> and watching <strong>football</strong> <i class="fas fa-football-ball" style="color: #511f1f;"></i>. Nowadays, you'll find me occassionally playing <strong>pickleball</strong> <i class="fas fa-table-tennis" style="color: #0fcc84;"></i> and shanking <strong>golf balls</strong> <i class="fas fa-golf-ball" style="color: #c0c0c9;"></i>. 
-            </li>
-            <li>
-              As a college student, I served as the Vice President for the <a href="https://www.instagram.com/sbaucirvine" target="_blank">UCI Sports Business Association</a> and as a member of the <a href="https://www.facebook.com/TennisClubatUCI/" target="_blank">UCI Club Tennis</a> travel team <i class="fas fa-baseball-ball" style="color: #dff24a;"></i>. Go Eaters!
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Eagle Scout -->
-      <section class="space-y-6">
-        <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
-          <i class="fas fa-medal text-blue-600"></i> Eagle Scout
-        </h2>
-        <div class="prose prose-slate max-w-none">
-          <ul>
-            <li>
-              Alhough I've only kept a few of the outdoor skills from being in Boy Scouts for 7 years, I attribute much of my desire for organization and efficiency from watching my Troop's strong adult and scout leaders.
-            </li>
-            <li>
-              Completing my <strong>Eagle Project</strong> taught me the importance of <strong>"leadership, leadership, leadership"</strong> and specifically the amount of planning and delegation required to accomplish big tasks.
-            </li>
-            <li>
-              Thanks to Scouting I will never forget to set <strong>SMART Goals</strong> that are specific, measurable, attainable, relevent, and timely.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div class="prose prose-slate max-w-none prose-headings:font-bold prose-a:text-blue-600 prose-a:hover:text-blue-800">
-        <h2><i class="fas fa-music" style="color: #6d4d9d;"></i> Music</h2>
-        <ul>
-          <li><a href="https://open.spotify.com/playlist/0fXEEXQLRVRKN68i7iCmtI?si=1bd4cab161064d33">Upbeat Alternative Rock</a> is my jam <i class="fas fa-headphones-alt" style="color: #f57d3d;"></i></li>
-          <li>On my <a href="/music">YouTube channel</a> I play <strong>ukulele and guitar</strong> covers of my favorite songs from tv shows and anime</li>
-          <li>Check out a <strong>tier list of my favorite artists</strong> at -> <a href="https://www.me-db.app/user/e_lee538/artists">me-db.app/user/e_lee538/artists</a></li>
-        </ul>
+    <!-- Key Values -->
+    <section class="pt-4 border-t border-gray-100">
+      <h2 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">Key Values</h2>
+      <div class="flex flex-wrap gap-3">
+        {['Team Building', 'Expressive Communication', 'Creative Ideas', 'Top-Down Planning'].map((value) => (
+          <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-full font-bold text-xs border border-blue-100 shadow-sm transition-all hover:scale-105 hover:bg-blue-100">
+            {value}
+          </span>
+        ))}
       </div>
-
+    </section>
   </div>
 </ContentLayout>

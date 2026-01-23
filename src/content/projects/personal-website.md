@@ -33,6 +33,8 @@ years: "2023 - Present"
 - ***Learning Experience***: Taught me the basics of Liquid templating, Markdown-based content management, and deployment via GitHub Pages.
 
 ## Inspirations
-Just wanted to shoutout these themes that helped inspire my website!
+Just wanted to shoutout these themes and sites that helped inspire my website!
 - [Minimal Mistakes Jekyll Theme](https://mademistakes.com/work/jekyll-themes/minimal-mistakes/) - The main foundation of my original site
-- [Dev-Friendly Portfolio Astro Theme](https://astro.build/themes/details/dev-friendly-portfolio/) - great interactive and visual design!
+- [Dev-Friendly Portfolio Astro Theme](https://astro.build/themes/details/dev-friendly-portfolio/) - Great interactive, visual design
+- [ibug.io](https://ibug.io/) - Nice mix of personal and professional content
+- [jmperezperez.com](https://jmperezperez.com/) - Clean, simple layout and cool stats dashboard

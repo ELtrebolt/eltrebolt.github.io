@@ -11,6 +11,8 @@ tags:
   - markdown
 ---
 
+> **Note:** This post refers to the initial version of my website built with [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) and Jekyll. My current site is built with Astro and Tailwind CSS.
+
 ## Getting Started
 
 Before getting started, check out [https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/#customizing](https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/#customizing) for the comprehensive overview of what to do. On that page, here is the key info I found:
@@ -157,7 +159,7 @@ $spotify-color: #1ED760 !default;
 > Using this spaghetti code of Liquid in _layouts/single.html will display related posts that share the same tags as the current post. It will show 1-4 posts depending on how many matches it finds.
 
 3. **In /_layouts/single.html add {% raw %}{% include related_tabs.html %}{% endraw %} before the last </div>**
-  - Or you could just copy paste the 24 lines of code directly into /single.html but I thought it'd be cleaner to separte
+  - Or you could just copy paste the 24 lines of code directly into /single.html but I thought it'd be cleaner to separate
 4. **Make sure related:true in /_config.yml in defaults: for the correct type:(posts)**
   - Also make sure you properly list out tags: in the posts
 

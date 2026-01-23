@@ -9,9 +9,9 @@ export const SITE = {
 };
 
 export const NAVIGATION = [
+  { title: 'Home', url: '/' },
   { title: 'About', url: '/about/' },
   { title: 'Projects', url: '/projects/' },
-  { title: 'Music', url: '/music/' },
   { title: 'Blog', url: '/blog/' },
 ];
 
@@ -37,7 +37,7 @@ export const AUTHORS: Record<string, Author> = {
     name: 'Ethan Lee',
     avatar: '/assets/profile-pics/Chargers.jpg',
     bio: 'Software Engineer',
-    quote: 'Automate everything.',
+    quote: 'Automate everything!',
     location: 'Los Angeles, California',
     links: [
       { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl', color: 'text-[#0077b5]' },
@@ -48,7 +48,7 @@ export const AUTHORS: Record<string, Author> = {
     name: 'Ethan Lee',
     avatar: '/assets/profile-pics/Personal.jpg',
     bio: 'Full-Stack Software Engineer',
-    quote: 'Why pay for an app when you can build it yourself?',
+    quote: 'Why use an app if you can\'t customize it?',
     location: '',
     links: [
       { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl', color: 'text-[#0077b5]' },
@@ -57,13 +57,13 @@ export const AUTHORS: Record<string, Author> = {
   },
   About: {
     name: 'Ethan Lee',
-    avatar: '/assets/favicon/apple-touch-icon.png',
-    bio: 'Sports lover, Eagle Scout, and amateur music maker',
-    quote: 'Stay Hydrated!',
+    avatar: '/assets/profile-pics/Personal.jpg',
+    bio: 'Software Engineer',
+    quote: 'How can I see the cool stats?',
     location: '',
     links: [
       { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl', color: 'text-[#0077b5]' },
-      { label: 'YouTube', icon: 'fab fa-fw fa-youtube', url: 'https://www.youtube.com/@Ukudabs', color: 'text-[#ff0000]' },
+      { label: 'GitHub', icon: 'fab fa-fw fa-github', url: 'https://github.com/eltrebolt', color: 'text-[#181717]' }
     ],
   },
   Music: {
@@ -82,11 +82,22 @@ export const AUTHORS: Record<string, Author> = {
     name: 'Ethan Lee',
     avatar: '/assets/profile-pics/Golf.jpg',
     bio: 'Writing Enthusiast',
-    quote: 'Always learning, creating, exploring!',
+    quote: 'Always learning, creating, exploring',
     location: '',
     links: [
       { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl', color: 'text-[#0077b5]' },
       { label: 'GitHub', icon: 'fab fa-fw fa-github', url: 'https://github.com/eltrebolt', color: 'text-[#181717]' },
+    ],
+  },
+  Personal: {
+    name: 'Ethan Lee',
+    avatar: '/assets/favicon/apple-touch-icon.png',
+    bio: 'Sports lover, Eagle Scout, and amateur music maker',
+    quote: 'Stay Hydrated!',
+    location: '',
+    links: [
+      { label: 'LinkedIn', icon: 'fab fa-fw fa-linkedin', url: 'https://linkedin.com/in/ethanpl', color: 'text-[#0077b5]' },
+      { label: 'YouTube', icon: 'fab fa-fw fa-youtube', url: 'https://www.youtube.com/@Ukudabs', color: 'text-[#ff0000]' },
     ],
   },
 };

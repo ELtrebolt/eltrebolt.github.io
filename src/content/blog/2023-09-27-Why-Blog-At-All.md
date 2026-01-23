@@ -6,7 +6,7 @@ categories:
   - Origins
 ---
 
-Before creating this website I often pondered whether or not it would be worth it to have a blog at all. I'm the type of person that always has to dive into my own motivations - the WHY - so that I can be confident I'm making the right decision in coherence.
+Before creating this website I often pondered whether or not it would be worth it to have a blog at all. I'm the type of person that always has to dive into my own motivations - the WHY - so that I can be confident I'm making the right decision that aligns with my values.
 
 The following are the 2 main motivations I've settled upon.
 - **Publish writing** = I think it's awesome to put out my own content that I created. I've always liked writing, and to me crafting essays in school was always fun because it's a constant work in progress to develop, improve, and ultimately complete a paper from start to finish.

@@ -93,7 +93,7 @@ const isExternal = authorName === 'Music';
     </div>
   )}
 
-  {authorName === 'About' && (
+  {authorName === 'Personal' && (
     <div class="space-y-4 pt-6 border-t border-gray-100">
       <div class="p-3 bg-gray-50 rounded-xl border border-gray-100 flex items-center gap-3">
         <div class="w-10 h-10 rounded-full bg-yellow-100 flex-shrink-0 flex items-center justify-center text-yellow-600 text-lg">
@@ -142,17 +142,11 @@ const isExternal = authorName === 'Music';
           <p class="text-sm font-bold text-gray-900 leading-tight">Fantasy Football</p>
         </div>
       </div>
+    </div>
+  )}
 
-      <!-- Key Values -->
-      <div class="pt-6 border-t border-gray-100">
-        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3 text-center lg:text-left">Key Values</p>
-        <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
-          {['Team Building', 'Expressive Communication', 'Creative Ideas', 'Top-Down Planning'].map((value) => (
-            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full font-semibold text-[11px] border border-blue-100 shadow-sm">
-              {value}
-            </span>
-          ))}
-        </div>
-      </div>
+  {authorName === 'About' && (
+    <div class="space-y-6 pt-6 border-t border-gray-100">
+      <!-- Key Values moved to main content -->
     </div>
   )}
